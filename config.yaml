@@ -1,0 +1,39 @@
+# Here you can set different probabilities in order to generate synthetic data based on them
+# add '-' if this probability should not be considered
+
+  music:
+    dataset_size: 5000
+    users_number: 5000
+    songs_number: 100
+    error_probability: 0.01
+
+    #probability of song created being from certain region ['Latin', 'Asian', 'American', 'European']
+    p1:
+      - 0.3
+      - 0.1
+      - 0.4
+      - 0.2
+
+    # probability of listening to a liked song [genre, probability]
+    p2:
+      - Rock
+      - 0.3
+    #probability of song genre liked based on favorite genre
+    p3: 0.7
+    #probability of buying a subscribtion after listening to more than x songs [probability, x]
+    p4:
+      - 0.7
+      - 20
+    # probability that the user has subscription
+    p5: 0.7
+    # probability that a song is added to favorites if it is listened atleast x time [Probability, x]
+    p6:
+      - 0.6
+      - 3
+    # probability that not a favorite song is skipped
+    p7: 0.2
+    #probability that a song from favorite playlist is played instead of random song
+    p8: 0.65
+    
+  other:
+      global_start_date: '2020-01-01'
