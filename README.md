@@ -32,3 +32,15 @@ Design the Raw Data
     - first songs may not be as popular
     - every artist has its most popular song, some of them will have more than one
     - 
+
+
+
+
+IDEA:
+- car selling
+- pokemon
+- make_classification sklearn (pure synthetic no real world interpretation)
+
+TO TALK:
+- 2 scenarios
+- use more ML?
