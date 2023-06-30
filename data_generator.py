@@ -305,3 +305,8 @@ class SyntheticStreamingDataGenerator:
         # TODO: If user listens for a particular song for more than X times then at this song to his favourites
         self.stream_list.append(stream)
         return user
+
+
+if __name__ == "__main__":
+    generator = SyntheticStreamingDataGenerator(config_file_path='config.yaml')
+    generator.run()
