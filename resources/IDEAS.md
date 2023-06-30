@@ -3,8 +3,8 @@ Business Problem
 - MUSIC - song/artist recommendation
 - MUSIC - subscription discount classification
 - CAR SELLING - HOW Much Cars to produce
-ML Problem
-- SELECT - MUSIC - song popularity - number of streams in next week or month - regression problem (ML)
+  ML Problem
+- SELECT - MUSIC - song popularity - number of streams in next week or month - regression problem (ML)  <--- CHOOSEN
 - MUSIC - song/artist recommendation - COMPLEX
 - MUSIC - subscription discount - ML classification
 - CAR SELLING - HOW Much Cars to produce - Time Series Analysis - Regression Problem
