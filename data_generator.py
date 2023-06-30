@@ -56,10 +56,10 @@ class SyntheticStreamingDataGenerator:
         artist_df = pd.DataFrame(self.artist_list)
         song_df = pd.DataFrame(self.song_list)
         stream_df = pd.DataFrame(self.stream_list)
-        users_df.to_csv(DATA_PATH / 'users.csv')
-        artist_df.to_csv(DATA_PATH / 'artists.csv')
-        song_df.to_csv(DATA_PATH / 'songs.csv')
-        stream_df.to_csv(DATA_PATH / 'streams.csv')
+        users_df.to_csv(DATA_PATH / 'users.csv', index=False)
+        artist_df.to_csv(DATA_PATH / 'artists.csv', index=False)
+        song_df.to_csv(DATA_PATH / 'songs.csv', index=False)
+        stream_df.to_csv(DATA_PATH / 'streams.csv', index=False)
 
     def create_users(self, week_no):
         # https://mycurvefit.com/
@@ -97,7 +97,7 @@ class SyntheticStreamingDataGenerator:
                 'favorite artists': [],
                 'favorite songs': [],
                 'streams': {},
-                'is_subscribed': np.random.choice([True, False], p=[0.1, 0.9]),
+                'is_subscribed': _rand_bool(0.1),
                 'week': week_no
             }
 
@@ -194,7 +194,7 @@ class SyntheticStreamingDataGenerator:
                     ['Pop', 'Rock', 'Hip-hop', 'Electronic', 'Jazz', 'Classical', 'Blues', 'Alternative'],
                     p=[prob_pop, prob_Rock, prob_HipHop, prob_Electronic, prob_Jazz, prob_Classical, prob_Blues,
                        prob_Alternative]),
-                'is_famous': np.random.choice([True, False], p=[0.1, 0.9]),
+                'is_famous': _rand_bool(0.1),
                 'week_no_created': week_no
             }
             self.artist_list.append(artist)
