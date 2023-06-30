@@ -10,6 +10,10 @@ DATA_PATH = Path('data')
 DATA_PATH.mkdir(exist_ok=True)
 
 
+def _rand_bool(true_prob):
+    return np.random.choice([True, False], p=[true_prob, 1 - true_prob])
+
+
 class SyntheticStreamingDataGenerator:
 
     def __init__(self, config_file_path):
@@ -190,34 +194,28 @@ class SyntheticStreamingDataGenerator:
                     ['Pop', 'Rock', 'Hip-hop', 'Electronic', 'Jazz', 'Classical', 'Blues', 'Alternative'],
                     p=[prob_pop, prob_Rock, prob_HipHop, prob_Electronic, prob_Jazz, prob_Classical, prob_Blues,
                        prob_Alternative]),
-                'famous': np.random.choice([True, False], p=[0.1, 0.9]),
-                'week': week_no
+                'is_famous': np.random.choice([True, False], p=[0.1, 0.9]),
+                'week_no_created': week_no
             }
             self.artist_list.append(artist)
 
     def generate_songs(self, week_no):
         for artist in self.artist_list:
-            is_generating_songs = np.random.choice([True, False], p=[0.25, 0.75])
-
-            if is_generating_songs:
-                song = {
-                    'song_id': len(self.song_list),
-                    'artist': artist['artist_id'],
-                    'genre': artist['genre'],
-                    'is_artist_famous': artist['famous'],
-                    'Premium': np.random.choice([True, False], p=[0.1, 0.9]),
-                    # premium songs can be listened by both subscribed and unsubscribed users
-                    'Famous': None,
-                    'week': week_no,
-                    'number of streams': 0,
-                }
-
-                if artist['famous']:
-                    song['Famous'] = np.random.choice([True, False], p=[0.7, 0.3])
-                else:
-                    song['Famous'] = np.random.choice([True, False], p=[0.1, 0.9])
-
-                self.song_list.append(song)
+            # Artist of generating songs every time few weeks,
+            # so we are randomly something if this week he will produce a song
+            if _rand_bool(.25):
+                self.song_list.append(
+                    {
+                        'song_id': len(self.song_list),
+                        'artist_id': artist['artist_id'],
+                        'genre': artist['genre'],
+                        'is_artist_famous': artist['famous'],
+                        'is_premium': _rand_bool(.1),
+                        # premium songs can be listened by both subscribed and unsubscribed users
+                        'is_famous': _rand_bool(.7) if artist['famous'] else _rand_bool(.1),
+                        'week_released': week_no,
+                        'number_of_streams': 0,
+                    })
 
     def generate_streams(self, week_no):
         # There will be a Spotify playlist that will consist songs that will appear
