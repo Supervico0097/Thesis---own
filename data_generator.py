@@ -223,8 +223,7 @@ class SyntheticStreamingDataGenerator:
         # There will be a Spotify playlist that will consist songs that will appear
         # randomly on users streams regardless of their preferences.
         # weekly_playlist = []
-        premium_songs_filter = filter(self.check_premium, self.song_list)  # create a list of premium songs
-        premium_songs = list(premium_songs_filter)  # list of premium songs
+        premium_songs = [song for song in self.song_list if song['Premium']]  # create a list of premium songs
 
         for user_i in range(len(self.user_list)):
             # count number of songs users goes through
