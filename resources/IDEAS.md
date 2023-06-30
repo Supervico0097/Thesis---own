@@ -49,4 +49,6 @@ TO TALK:
 - [ ] Separate table for users, favourite genres to be saved in a different CSV file and remove it from users file
 - [ ] Remove streams data from users, CSV file
 - [ ] line 195 ```list_songs = self.song_list``` don't do that.
-- [ ] Tried to use the less nested, if  
+- [ ] Tried to use the less nested, if
+
+- [ ] ML resources: https://www.kaggle.com/code/yasserh/song-popularity-prediction-best-ml-models
