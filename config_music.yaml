@@ -1,0 +1,96 @@
+# Here you can set different frequencies in order to generate synthetic data based on them
+# add '-' if this probability should not be considered
+
+WEEKS_NUM: 100 # instead of dates, just num of weeks
+users_number: 10000 #this will be approximate number of user by END_DATE
+artists_number: 1000
+
+frequencies_genre: {
+  'Pop': {
+    "user": 400,
+    "artist": 300
+  },
+  'Rock': {
+    "user": 700,
+    "artist": 200
+  },
+  'Hip-hop': {
+    "user": 300,
+    "artist": 100
+  },
+  'Electronic': {
+    "user": 200,
+    "artist": 200
+  },
+  'Jazz': {
+    "user": 170,
+    "artist": 500
+  },
+  'Classical': {
+    "user": 100,
+    "artist": 100
+  },
+  'Blues': {
+    "user": 150,
+    "artist": 300
+  },
+  'Alternative': {
+    "user": 400,
+    "artist": 400
+  },
+}
+
+"frequencies_continent": {
+  'North America': {
+    "user": 700,
+    "artist": 700,
+  },
+  'South America': {
+    "user": 400,
+    "artist": 400,
+  },
+  'Europe': {
+    "user": 500,
+    "artist": 500,
+  },
+  'Africa': {
+    "user": 200,
+    "artist": 200,
+  },
+  'Asia': {
+    "user": 300,
+    "artist": 300,
+  },
+  'Oceana': {
+    "user": 100,
+    "artist": 100,
+  },
+}
+
+
+#STREAMS
+avg_songs_unsub: 20 #average songs listened by unsubscribed users
+avg_songs_sub: 50 #average songs listened by subscribed users
+
+# Probabilities
+#Random songs section
+p_random_songs_stream: 0.8 #user will access random songs section
+# TODO: use short abbreviations like sg_fv_ar_fam_sg_fav_gen_same_con
+p_1: 0.8 #Probability of listening to song with famous artist, famous song, favorite genre, same continent
+p_2: 0.7 #Probability of listening to song with famous artist, famous song, favorite genre
+p_3: 0.6 #Probability of listening to favorite genre
+p_4: 0.4 #other
+
+#user will access favourite playlist based on probability below
+p_favorite_playlist: 0.6
+# probability user will listen to song in favorites 0-1
+p_favorite: 0.6
+#probability to repeat favorite song
+p_repeat_fav_sg: 0.55
+
+# TODO: use this probabilities
+#probability to repeat not_favorite song but favorite genre
+p_repeat_not_fav_sg_fv_gn: 0.5
+#probability to repeat not_favorite song and not favorite genre
+p_repeat_not_fav_sg_not_fv_gn: 0.3
+# average number of random songs a music fan user goes through per week
