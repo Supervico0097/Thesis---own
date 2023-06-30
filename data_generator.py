@@ -1,11 +1,15 @@
 import datetime
 import random
+from pathlib import Path
 
 import faker
 import numpy as np
 import yaml
 import pandas as pd
 
+
+DATA_PATH = Path('data')
+DATA_PATH.mkdir(exist_ok=True)
 
 class SyntheticStreamingDataGenerator:
 
@@ -54,15 +58,14 @@ class SyntheticStreamingDataGenerator:
             self.generate_streams(week_no)
 
 
-        # TODO: pandas df save to csv (use ./data path)
         users_df = pd.DataFrame(self.user_list)
         artist_df = pd.DataFrame(self.artist_list)
         song_df = pd.DataFrame(self.song_list)
         stream_df = pd.DataFrame(self.stream_list)
-        users_df.to_csv('users.csv')
-        artist_df.to_csv('artists.csv')
-        song_df.to_csv('songs.csv')
-        stream_df.to_csv('streams.csv')
+        users_df.to_csv(DATA_PATH/'users.csv')
+        artist_df.to_csv(DATA_PATH/'artists.csv')
+        song_df.to_csv(DATA_PATH/'songs.csv')
+        stream_df.to_csv(DATA_PATH/'streams.csv')
 
     def create_users(self, week_no):
         # https://mycurvefit.com/
