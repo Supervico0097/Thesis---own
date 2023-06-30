@@ -25,25 +25,27 @@ class SyntheticStreamingDataGenerator:
         self.stream_list = []
 
         with open(config_file_path) as fh:
-            read_data = yaml.load(fh, Loader=yaml.FullLoader)
+            data = yaml.load(fh, Loader=yaml.FullLoader)
 
-        self.users_number = read_data['music']['users_number']
-        self.artists_number = read_data['music']['artists_number']
-        self.weeks_num = read_data['music']['WEEKS_NUM']
-        self.probabilities_genre_users = read_data['music']['probabilities_genre_users']
-        self.probabilities_genre_artists = read_data['music']['probabilities_genre_artists']
-        self.probabilities_continent_users = read_data['music']['probabilities_continent_users']
-        self.probabilities_continent_artists = read_data['music']['probabilities_continent_artists']
-        self.p_favorite = read_data['music']['p_favorite']
-        self.p_favorite_playlist = read_data['music']['p_favorite_playlist']
-        self.p_repeat_fav_sg = read_data['music']['p_repeat_fav_sg']
-        self.p_random_songs = read_data['music']['p_random_songs']
-        self.avg_songs_unsub = read_data['music']['avg_songs_unsub']
-        self.avg_songs_sub = read_data['music']['avg_songs_sub']
-        self.p_1 = read_data['music']['p_1']
-        self.p_2 = read_data['music']['p_2']
-        self.p_3 = read_data['music']['p_3']
-        self.p_4 = read_data['music']['p_4']
+        self.users_number = data['users_number']
+        self.artists_number = data['artists_number']
+        self.weeks_num = data['WEEKS_NUM']
+
+        frequencies_genre_df = pd.DataFrame(data['frequencies_genre']).T
+        self.probabilities_genre_df = frequencies_genre_df / frequencies_genre_df.sum()
+        frequencies_continent_df = pd.DataFrame(data['frequencies_continent']).T
+        self.probabilities_continent_df = frequencies_continent_df / frequencies_continent_df.sum()
+
+        self.p_favorite = data['p_favorite']
+        self.p_favorite_playlist = data['p_favorite_playlist']
+        self.p_repeat_fav_sg = data['p_repeat_fav_sg']
+        self.p_random_songs_stream = data['p_random_songs_stream']
+        self.avg_songs_unsub = data['avg_songs_unsub']
+        self.avg_songs_sub = data['avg_songs_sub']
+        self.p_1 = data['p_1']
+        self.p_2 = data['p_2']
+        self.p_3 = data['p_3']
+        self.p_4 = data['p_4']
 
     def run(self):
         for week_no in range(self.weeks_num):
@@ -67,32 +69,15 @@ class SyntheticStreamingDataGenerator:
             (11.17315 + 0.3660266 * week_no + 0.009279995 * week_no ** 2) * (self.users_number / 5976.23302825)
         )
 
-        s = sum(self.probabilities_genre_users)
-        prob_pop = self.probabilities_genre_users[0] / s
-        prob_Rock = self.probabilities_genre_users[1] / s
-        prob_HipHop = self.probabilities_genre_users[2] / s
-        prob_Electronic = self.probabilities_genre_users[3] / s
-        prob_Jazz = self.probabilities_genre_users[4] / s
-        prob_Classical = self.probabilities_genre_users[5] / s
-        prob_Blues = self.probabilities_genre_users[6] / s
-        prob_Alternative = self.probabilities_genre_users[7] / s
-
-        s = sum(self.probabilities_continent_users)
-        prob_NA = self.probabilities_continent_users[0] / s
-        prob_SA = self.probabilities_continent_users[1] / s
-        prob_EU = self.probabilities_continent_users[2] / s
-        prob_AF = self.probabilities_continent_users[3] / s
-        prob_AS = self.probabilities_continent_users[4] / s
-        prob_OC = self.probabilities_continent_users[5] / s
-
         for _ in range(num_users_to_add):
 
             user = {
                 'user_id': len(self.user_list),
                 'user_name': self.fake.name(),
                 'age': int(((np.random.lognormal(mean=1, sigma=0.1, size=1)) * 20 - 25)[0]),
-                'continent': np.random.choice(['North America', 'South America', 'Europe', 'Africa', 'Asia', 'Oceana'],
-                                              p=[prob_NA, prob_SA, prob_EU, prob_AF, prob_AS, prob_OC]),
+                'continent': np.random.choice(
+                    a=self.probabilities_continent_df.index.to_list(),
+                    p=self.probabilities_continent_df.user.to_list()),
                 'favorite genres': [],
                 'favorite artists': [],
                 'favorite songs': [],
@@ -104,10 +89,9 @@ class SyntheticStreamingDataGenerator:
             # adding favorite genres
             for _ in range(int(np.random.choice([0, 1, 2, 3], p=[0.2, 0.4, 0.3, 0.1]))):
                 user['favorite genres'].append(np.random.choice(
-                    ['Pop', 'Rock', 'Hip-hop', 'Electronic', 'Jazz', 'Classical', 'Blues', 'Alternative'],
-                    p=[prob_pop, prob_Rock, prob_HipHop, prob_Electronic, prob_Jazz, prob_Classical, prob_Blues,
-                       prob_Alternative]))
-
+                    a=self.probabilities_genre_df.index.to_list(),
+                    p=self.probabilities_genre_df.user.to_list())
+                )
             user['favorite genres'] = list(dict.fromkeys(user['favorite genres']))  # remove duplicates
 
             # adding favorite artists
@@ -117,14 +101,15 @@ class SyntheticStreamingDataGenerator:
                 for _ in range(20):
                     choice = random.choice(self.artist_list)
                     if choice['continent'] == user['continent'] and choice['genre'] in user['favorite genres'] and \
-                            choice['famous'] and random.uniform(0, 1) < 0.7:
+                            choice['is_famous'] and random.uniform(0, 1) < 0.7:
                         to_add = True
                         break
                     elif choice['continent'] == user['continent'] and choice['genre'] in user['favorite genres'] and \
                             random.uniform(0, 1) < 0.4:
                         to_add = True
                         break
-                    elif choice['genre'] in user['favorite genres'] and choice['famous'] and random.uniform(0, 1) < 0.4:
+                    elif choice['genre'] in user['favorite genres'] and choice['is_famous'] and random.uniform(0,
+                                                                                                               1) < 0.4:
                         to_add = True
                         break
                     elif random.uniform(0, 1) < 0.05:
@@ -139,14 +124,14 @@ class SyntheticStreamingDataGenerator:
 
             # add favorite songs - first go through favorite artists
             for i in user['favorite artists']:
-                favorite_artist_list = [song for song in self.song_list if song['artist'] == i]
+                favorite_artist_list = [song for song in self.song_list if song['artist_id'] == i]
 
                 for song in favorite_artist_list:
                     # to check if to add to favorites song of favorite artist
                     if random.uniform(0, 1) < 0.7 and user['is_subscribed']:
                         user['favorite songs'].append(song['song_id'])
 
-                    if random.uniform(0, 1) < 0.7 and not user['is_subscribed'] and song['Premium']:
+                    if random.uniform(0, 1) < 0.7 and not user['is_subscribed'] and song['is_premium']:
                         user['favorite songs'].append(song['song_id'])
 
             # then go randomly through songs
@@ -162,44 +147,26 @@ class SyntheticStreamingDataGenerator:
             self.user_list.append(user)
 
     def create_artists(self, week_no):
-        continent = ['North America', 'South America', 'Europe', 'Africa', 'Asia', 'Oceana']
         num_artists_to_add = round(
             (11.17315 + 0.3660266 * week_no + 0.009279995 * week_no ** 2) * (self.artists_number / 5976.23302825)
         )
 
-        s = sum(self.probabilities_genre_artists)
-        prob_pop = self.probabilities_genre_artists[0] / s
-        prob_Rock = self.probabilities_genre_artists[1] / s
-        prob_HipHop = self.probabilities_genre_artists[2] / s
-        prob_Electronic = self.probabilities_genre_artists[3] / s
-        prob_Jazz = self.probabilities_genre_artists[4] / s
-        prob_Classical = self.probabilities_genre_artists[5] / s
-        prob_Blues = self.probabilities_genre_artists[6] / s
-        prob_Alternative = self.probabilities_genre_artists[7] / s
-
-        s = sum(self.probabilities_continent_artists)
-        prob_NA = self.probabilities_continent_artists[0] / s
-        prob_SA = self.probabilities_continent_artists[1] / s
-        prob_EU = self.probabilities_continent_artists[2] / s
-        prob_AF = self.probabilities_continent_artists[3] / s
-        prob_AS = self.probabilities_continent_artists[4] / s
-        prob_OC = self.probabilities_continent_artists[5] / s
-
         for i in range(num_artists_to_add):
             artist = {
                 'artist_id': len(self.artist_list),
-                'continent': np.random.choice(['North America', 'South America', 'Europe', 'Africa', 'Asia', 'Oceana'],
-                                              p=[prob_NA, prob_SA, prob_EU, prob_AF, prob_AS, prob_OC]),
+                'continent': np.random.choice(
+                    a=self.probabilities_continent_df.index.to_list(),
+                    p=self.probabilities_continent_df.artist.to_list()),
                 'genre': np.random.choice(
-                    ['Pop', 'Rock', 'Hip-hop', 'Electronic', 'Jazz', 'Classical', 'Blues', 'Alternative'],
-                    p=[prob_pop, prob_Rock, prob_HipHop, prob_Electronic, prob_Jazz, prob_Classical, prob_Blues,
-                       prob_Alternative]),
+                    a=self.probabilities_genre_df.index.to_list(),
+                    p=self.probabilities_genre_df.artist.to_list()),
                 'is_famous': _rand_bool(0.1),
                 'week_no_created': week_no
             }
             self.artist_list.append(artist)
 
     def generate_songs(self, week_no):
+        assert self.artist_list, "artist_list is empty"  # It checks whether the list is empty
         for artist in self.artist_list:
             # Artist of generating songs every time few weeks,
             # so we are randomly something if this week he will produce a song
@@ -209,10 +176,10 @@ class SyntheticStreamingDataGenerator:
                         'song_id': len(self.song_list),
                         'artist_id': artist['artist_id'],
                         'genre': artist['genre'],
-                        'is_artist_famous': artist['famous'],
+                        'is_artist_famous': artist['is_famous'],
                         'is_premium': _rand_bool(.1),
                         # premium songs can be listened by both subscribed and unsubscribed users
-                        'is_famous': _rand_bool(.7) if artist['famous'] else _rand_bool(.1),
+                        'is_famous': _rand_bool(.7) if artist['is_famous'] else _rand_bool(.1),
                         'week_released': week_no,
                         'number_of_streams': 0,
                     })
@@ -221,8 +188,8 @@ class SyntheticStreamingDataGenerator:
         # There will be a Spotify playlist that will consist songs that will appear
         # randomly on users streams regardless of their preferences.
         # weekly_playlist = []
-        premium_songs = [song for song in self.song_list if song['Premium']]  # create a list of premium songs
-
+        premium_songs = [song for song in self.song_list if song['is_premium']]  # create a list of premium songs
+        assert self.user_list, "user_list is empty"  # It checks whether the list is empty
         for user_i in range(len(self.user_list)):
             # count number of songs users goes through
             if self.user_list[user_i]['is_subscribed']:
@@ -230,32 +197,37 @@ class SyntheticStreamingDataGenerator:
                 if len(self.song_list) < self.avg_songs_sub:
                     n_songs = len(self.song_list)
                 else:
-                    n_songs = random.randrange(self.avg_songs_sub - (0.5 * self.avg_songs_sub),
-                                               self.avg_songs_sub + (0.5 * self.avg_songs_sub))
+                    n_songs = random.randrange(self.avg_songs_sub - int(0.5 * self.avg_songs_sub),
+                                               self.avg_songs_sub + int(0.5 * self.avg_songs_sub))
             else:
                 list_songs = premium_songs
                 if len(premium_songs) < self.avg_songs_unsub:
                     n_songs = len(premium_songs)
                 else:
-                    n_songs = random.randrange(self.avg_songs_unsub - (0.5 * self.avg_songs_unsub),
-                                               self.avg_songs_unsub + (0.5 * self.avg_songs_unsub))
+                    n_songs = random.randrange(self.avg_songs_unsub - int(0.5 * self.avg_songs_unsub),
+                                               self.avg_songs_unsub + int(0.5 * self.avg_songs_unsub))
 
             # Random songs outside his favourites
-            if random.uniform(0, 1) < self.p_random_songs:  # check if user will access the random songs
+            if random.uniform(0, 1) < self.p_random_songs_stream:  # check if user will access the random songs
                 if list_songs:
                     for _ in range(int(n_songs)):  # go through songs
                         random_song = random.choice(list_songs)  # choose random song
 
                         # if singer is famous, song is famous, same genre, same continent
-                        if (random_song['is_artist_famous']) and (random_song['Famous']) and (
-                                random_song['genre'] in self.user_list[user_i]['favorite genres']) and (
-                                self.artist_list[random_song['artist']]['continent'] == self.user_list[user_i][
-                            'continent']) and random.uniform(0, 1) < self.p_1:
+                        if (
+                                random_song['is_artist_famous']) \
+                                and (random_song['is_famous']) \
+                                and (
+                                random_song['genre'] in self.user_list[user_i]['favorite genres']) \
+                                and (
+                                self.artist_list[random_song['artist_id']]['continent'] == self.user_list[user_i][
+                            'continent']) \
+                                and random.uniform(0, 1) < self.p_1:
                             user = self.add_stream(self.user_list[user_i], random_song['song_id'], week_no)
                             self.user_list[user_i] = user
 
                         # if singer is famous, song is famous, same genre
-                        elif random_song['is_artist_famous'] and random_song['Famous'] and (
+                        elif random_song['is_artist_famous'] and random_song['is_famous'] and (
                                 random_song['genre'] in self.user_list[user_i]['favorite genres']) and random.uniform(0,
                                                                                                                       1) < self.p_2:
                             user = self.add_stream(self.user_list[user_i], random_song['song_id'], week_no)
@@ -306,5 +278,5 @@ class SyntheticStreamingDataGenerator:
 
 
 if __name__ == "__main__":
-    generator = SyntheticStreamingDataGenerator(config_file_path='config.yaml')
+    generator = SyntheticStreamingDataGenerator(config_file_path='config_music.yaml')
     generator.run()
