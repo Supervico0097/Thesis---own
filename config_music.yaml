@@ -68,29 +68,29 @@ frequencies_genre: {
 }
 
 
-#STREAMS
-avg_songs_unsub: 20 #average songs listened by unsubscribed users
-avg_songs_sub: 50 #average songs listened by subscribed users
+min_streams_to_favorites: 7 #minimum of listens to song before adding to favorite
+min_streams_to_famous_song: 1000 #minimum streams to song before becoming famous
+min_streams_to_famous_artist: 20000 #minimum streams to song before becoming famous
+
+
+#Number of STREAMS
+avg_songs_unsub: 20 #average songs listened by unsubscribed users in a week
+avg_songs_sub: 50 #average songs listened by subscribed users in a week
 
 # Probabilities
 #Random songs section
-p_random_songs_stream: 0.8 #user will access random songs section
-# TODO: use short abbreviations like sg_fv_ar_fam_sg_fav_gen_same_con
-p_1: 0.8 #Probability of listening to song with famous artist, famous song, favorite genre, same continent
-p_2: 0.7 #Probability of listening to song with famous artist, famous song, favorite genre
-p_3: 0.6 #Probability of listening to favorite genre
-p_4: 0.4 #other
+p_random_songs_stream: 0.6 #probability that user will access random songs section
+p_favorite_playlist: 0.8 #probability that user will access favorite songs section
 
-#user will access favourite playlist based on probability below
-p_favorite_playlist: 0.6
-# probability user will listen to song in favorites 0-1
-p_favorite: 0.6
-#probability to repeat favorite song
-p_repeat_fav_sg: 0.55
 
-# TODO: use this probabilities
-#probability to repeat not_favorite song but favorite genre
-p_repeat_not_fav_sg_fv_gn: 0.5
-#probability to repeat not_favorite song and not favorite genre
-p_repeat_not_fav_sg_not_fv_gn: 0.3
-# average number of random songs a music fan user goes through per week
+p_fav_art_sng_gnr_cnt: 0.8 #Probability of listening to song with famous artist, famous song, favorite genre, same continent
+p_fav_art_sng_gnr: 0.7 #Probability of listening to song with famous artist, famous song, favorite genre
+p_fav_gnr: 0.6 #Probability of listening to favorite genre
+p_other: 0.4 #other
+
+
+
+p_favorite: 0.6 # probability that user will listen to song that is a favorite
+
+
+
