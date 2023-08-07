@@ -1,999 +1,999 @@
 artist_id,continent,genre,is_famous,number_of_streams,week_no_created
-0,North America,Rock,False,16895,0
-1,North America,Jazz,False,8861,0
-2,Europe,Alternative,True,38828,1
-3,North America,Pop,True,29052,1
-4,Asia,Pop,True,25131,2
-5,South America,Blues,True,43667,2
-6,Africa,Jazz,False,6327,3
-7,North America,Blues,False,6078,3
-8,Europe,Rock,False,14333,4
-9,Europe,Rock,False,17591,4
-10,Asia,Alternative,False,19763,5
-11,Africa,Hip-hop,True,21834,5
-12,Europe,Electronic,False,11255,6
-13,South America,Jazz,True,21927,6
-14,South America,Classical,True,20667,7
-15,North America,Alternative,True,21182,7
-16,Africa,Alternative,True,20192,8
-17,North America,Blues,False,15191,8
-18,Asia,Jazz,False,7698,9
-19,Africa,Jazz,True,28944,9
-20,Europe,Alternative,False,16273,9
-21,Europe,Rock,True,22420,10
-22,Oceana,Pop,False,18600,10
-23,South America,Jazz,True,6485,10
-24,Africa,Blues,True,21461,11
-25,Europe,Jazz,False,6265,11
-26,Africa,Electronic,False,4652,11
-27,Europe,Rock,False,10732,12
-28,Europe,Pop,False,6443,12
-29,Asia,Jazz,True,20284,12
-30,Europe,Pop,False,5728,13
-31,South America,Alternative,True,5272,13
-32,North America,Rock,False,2911,13
-33,Europe,Jazz,False,3565,14
-34,North America,Alternative,False,8320,14
-35,Asia,Rock,True,20214,14
-36,South America,Jazz,False,3862,15
-37,North America,Blues,False,15573,15
-38,Europe,Pop,True,13703,15
-39,North America,Blues,True,21461,16
-40,North America,Alternative,False,8805,16
-41,Oceana,Jazz,True,36116,16
-42,Asia,Blues,False,11990,17
-43,Asia,Pop,False,14819,17
-44,Asia,Jazz,False,13141,17
-45,North America,Alternative,False,4495,18
-46,South America,Pop,True,22711,18
-47,Oceana,Pop,False,12081,18
-48,South America,Alternative,False,12314,19
-49,Europe,Jazz,False,12992,19
-50,North America,Blues,False,7665,19
-51,South America,Electronic,True,31169,19
-52,South America,Blues,False,6266,20
-53,Africa,Blues,True,18433,20
-54,North America,Rock,False,6020,20
-55,North America,Jazz,False,10529,20
-56,South America,Electronic,False,10692,21
-57,Africa,Pop,False,6539,21
-58,Asia,Alternative,False,3651,21
-59,North America,Hip-hop,False,12144,21
-60,Oceana,Pop,False,6243,22
-61,Europe,Blues,False,2990,22
-62,Oceana,Jazz,False,6951,22
-63,North America,Rock,False,17665,22
-64,North America,Rock,True,31594,23
-65,South America,Pop,False,9707,23
-66,Europe,Jazz,False,10140,23
-67,Europe,Electronic,False,4459,23
-68,South America,Alternative,False,8534,24
-69,South America,Pop,False,11989,24
-70,North America,Alternative,False,3237,24
-71,North America,Classical,False,12513,24
-72,Europe,Electronic,True,6600,25
-73,Africa,Blues,False,6012,25
-74,Africa,Hip-hop,False,12294,25
-75,Europe,Pop,False,3646,25
-76,Oceana,Jazz,False,7674,26
-77,Africa,Jazz,False,3039,26
-78,Europe,Alternative,False,2901,26
-79,North America,Alternative,False,5768,26
-80,North America,Pop,False,2373,26
-81,North America,Jazz,False,6512,27
-82,Asia,Hip-hop,False,14286,27
-83,Asia,Electronic,False,15498,27
-84,South America,Pop,False,2258,27
-85,South America,Rock,False,9012,27
-86,Africa,Blues,True,11392,28
-87,Asia,Jazz,False,1967,28
-88,South America,Hip-hop,False,18712,28
-89,North America,Alternative,False,7274,28
-90,Europe,Alternative,False,1842,28
-91,North America,Hip-hop,False,13236,29
-92,Oceana,Electronic,False,2742,29
-93,North America,Alternative,False,10948,29
-94,Asia,Alternative,False,2193,29
-95,North America,Jazz,False,4976,29
-96,North America,Rock,False,13570,30
-97,North America,Pop,False,13140,30
-98,North America,Blues,False,7190,30
-99,Asia,Pop,False,4469,30
-100,Europe,Jazz,False,7708,30
-101,North America,Alternative,True,7803,31
-102,North America,Alternative,False,5266,31
-103,South America,Pop,False,1498,31
-104,Europe,Jazz,False,5009,31
-105,North America,Jazz,False,3178,31
-106,North America,Pop,False,2630,32
-107,South America,Electronic,False,15363,32
-108,Europe,Pop,False,1022,32
-109,Asia,Rock,False,7541,32
-110,South America,Alternative,False,1311,32
-111,North America,Rock,False,5940,33
-112,Africa,Blues,False,1421,33
-113,Europe,Jazz,False,2268,33
-114,South America,Jazz,False,15575,33
-115,South America,Blues,False,2215,33
-116,North America,Classical,False,3660,33
-117,Africa,Electronic,False,669,34
-118,Asia,Classical,True,1610,34
-119,South America,Jazz,False,5548,34
-120,North America,Alternative,False,6450,34
-121,Asia,Jazz,True,12314,34
-122,South America,Pop,False,7784,34
-123,Europe,Jazz,False,5485,35
-124,Africa,Pop,False,4825,35
-125,Africa,Jazz,False,5272,35
-126,North America,Alternative,False,5457,35
-127,North America,Rock,False,5786,35
-128,Asia,Pop,False,4778,35
-129,North America,Alternative,True,2263,36
-130,Europe,Blues,False,5164,36
-131,Africa,Pop,False,13840,36
-132,Africa,Electronic,False,932,36
-133,North America,Alternative,False,5264,36
-134,North America,Classical,False,1272,36
-135,South America,Hip-hop,False,3129,37
-136,Europe,Pop,True,5072,37
-137,Asia,Alternative,False,1207,37
-138,North America,Pop,False,2705,37
-139,North America,Alternative,False,2598,37
-140,Asia,Electronic,False,8487,37
-141,South America,Alternative,False,2975,38
-142,North America,Blues,False,9723,38
-143,Europe,Alternative,False,6778,38
-144,Oceana,Blues,False,1079,38
-145,Europe,Jazz,False,14759,38
-146,North America,Alternative,False,7082,38
-147,Africa,Rock,False,10485,39
-148,Europe,Alternative,False,10407,39
-149,South America,Electronic,False,8341,39
-150,North America,Jazz,False,4855,39
-151,South America,Pop,False,12252,39
-152,South America,Pop,False,5606,39
-153,Asia,Pop,False,1385,39
-154,Europe,Pop,False,6588,40
-155,Africa,Jazz,False,12938,40
-156,Asia,Alternative,False,5460,40
-157,South America,Jazz,True,5917,40
-158,Europe,Jazz,False,2026,40
-159,North America,Blues,False,4792,40
-160,Europe,Jazz,False,2884,40
-161,Oceana,Rock,False,2014,41
-162,North America,Pop,False,2660,41
-163,North America,Blues,True,5972,41
-164,South America,Blues,False,7258,41
-165,North America,Jazz,False,1262,41
-166,Asia,Jazz,False,5981,41
-167,North America,Blues,False,4506,41
-168,Africa,Pop,True,10799,42
-169,South America,Alternative,False,8475,42
-170,North America,Jazz,False,7795,42
-171,Europe,Alternative,False,3897,42
-172,North America,Alternative,False,3874,42
-173,Oceana,Alternative,True,3935,42
-174,North America,Pop,False,3527,42
-175,North America,Jazz,False,1302,43
-176,North America,Pop,False,6933,43
-177,North America,Alternative,True,4318,43
-178,South America,Jazz,False,5291,43
-179,South America,Blues,True,7058,43
-180,Asia,Jazz,False,5224,43
-181,South America,Jazz,False,5982,43
-182,North America,Classical,False,972,44
-183,South America,Jazz,False,1148,44
-184,Europe,Jazz,False,5907,44
-185,North America,Pop,False,5606,44
-186,North America,Rock,False,6261,44
-187,North America,Pop,True,973,44
-188,North America,Blues,False,7961,44
-189,South America,Jazz,False,1216,44
-190,North America,Pop,False,8470,45
-191,Asia,Jazz,False,1339,45
-192,Europe,Jazz,False,8047,45
-193,Oceana,Jazz,False,8177,45
-194,Europe,Rock,False,1356,45
-195,Oceana,Jazz,False,2390,45
-196,Oceana,Jazz,False,898,45
-197,Asia,Pop,True,1209,45
-198,Africa,Rock,False,4564,46
-199,Africa,Alternative,False,2597,46
-200,Africa,Jazz,False,9728,46
-201,Europe,Hip-hop,False,8690,46
-202,North America,Classical,False,1377,46
-203,North America,Hip-hop,False,4577,46
-204,Africa,Jazz,False,366,46
-205,Europe,Hip-hop,False,786,46
-206,North America,Hip-hop,False,2544,47
-207,North America,Alternative,False,868,47
-208,Asia,Rock,False,1015,47
-209,South America,Blues,False,5960,47
-210,Asia,Blues,False,4004,47
-211,North America,Hip-hop,False,1636,47
-212,Oceana,Jazz,False,751,47
-213,Asia,Classical,False,7657,47
-214,North America,Alternative,False,4748,48
-215,North America,Pop,False,1493,48
-216,South America,Jazz,True,5185,48
-217,South America,Pop,False,938,48
-218,South America,Jazz,False,923,48
-219,North America,Jazz,False,1183,48
-220,Europe,Jazz,False,4177,48
-221,Europe,Alternative,False,3043,48
-222,North America,Pop,False,9202,49
-223,Africa,Alternative,False,1242,49
-224,Europe,Blues,True,3020,49
-225,South America,Blues,False,457,49
-226,Asia,Blues,False,4024,49
-227,Europe,Rock,False,2687,49
-228,Asia,Jazz,False,2184,49
-229,Europe,Jazz,False,1642,49
-230,North America,Jazz,False,596,49
-231,Asia,Alternative,False,492,50
-232,Oceana,Blues,False,2863,50
-233,South America,Pop,False,4563,50
-234,North America,Blues,False,3752,50
-235,Europe,Jazz,False,682,50
-236,South America,Pop,False,4538,50
-237,North America,Alternative,False,1210,50
-238,Africa,Blues,False,781,50
-239,Asia,Rock,False,1562,50
-240,North America,Jazz,False,2763,51
-241,North America,Hip-hop,False,1461,51
-242,Europe,Classical,False,761,51
-243,North America,Jazz,False,3524,51
-244,North America,Electronic,False,6940,51
-245,South America,Jazz,False,559,51
-246,South America,Alternative,False,817,51
-247,Oceana,Pop,False,6688,51
-248,Asia,Alternative,False,2212,51
-249,Europe,Jazz,True,624,52
-250,Europe,Alternative,False,1437,52
-251,North America,Classical,False,2565,52
-252,Europe,Alternative,True,383,52
-253,South America,Jazz,False,599,52
-254,Oceana,Jazz,False,532,52
-255,South America,Jazz,False,1203,52
-256,Europe,Rock,False,1247,52
-257,Europe,Rock,True,918,52
-258,North America,Jazz,False,602,53
-259,Asia,Blues,False,5578,53
-260,North America,Jazz,False,2779,53
-261,South America,Blues,False,334,53
-262,South America,Pop,False,800,53
-263,Europe,Alternative,False,1304,53
-264,Asia,Hip-hop,False,563,53
-265,Africa,Electronic,False,790,53
-266,North America,Rock,False,7090,53
-267,North America,Jazz,True,5525,54
-268,Asia,Jazz,True,1758,54
-269,North America,Pop,False,2888,54
-270,Europe,Alternative,False,5525,54
-271,Africa,Rock,False,647,54
-272,North America,Alternative,True,7387,54
-273,Africa,Pop,False,2688,54
-274,South America,Alternative,False,3731,54
-275,North America,Jazz,True,3184,54
-276,North America,Alternative,True,5679,54
-277,Europe,Alternative,False,2484,55
-278,Asia,Pop,True,2604,55
-279,North America,Blues,False,5061,55
-280,North America,Jazz,False,6588,55
-281,Europe,Alternative,False,475,55
-282,Europe,Blues,False,354,55
-283,Oceana,Electronic,False,558,55
-284,Europe,Rock,False,3180,55
-285,South America,Rock,False,3002,55
-286,Asia,Alternative,False,1440,55
-287,Oceana,Alternative,False,4133,56
-288,Asia,Alternative,False,5188,56
-289,Europe,Pop,False,1056,56
-290,North America,Pop,False,1542,56
-291,Asia,Alternative,False,2917,56
-292,Asia,Jazz,True,3062,56
-293,Europe,Electronic,False,393,56
-294,Europe,Pop,False,1462,56
-295,Africa,Blues,False,5142,56
-296,North America,Electronic,False,2366,56
-297,Africa,Alternative,False,3520,57
-298,South America,Alternative,False,1097,57
-299,South America,Pop,False,5684,57
-300,South America,Alternative,False,2068,57
-301,North America,Hip-hop,False,2929,57
-302,North America,Alternative,False,1484,57
-303,Asia,Rock,False,1564,57
-304,North America,Pop,False,980,57
-305,South America,Jazz,False,1653,57
-306,North America,Alternative,False,1175,57
-307,South America,Jazz,False,929,58
-308,Africa,Jazz,False,250,58
-309,North America,Blues,False,2541,58
-310,Asia,Pop,False,1333,58
-311,South America,Classical,False,3900,58
-312,South America,Alternative,False,1803,58
-313,Asia,Jazz,False,489,58
-314,Africa,Blues,False,6924,58
-315,Asia,Rock,False,2193,58
-316,Asia,Jazz,False,3290,58
-317,Asia,Pop,False,1331,58
-318,Oceana,Blues,False,1511,59
-319,Africa,Pop,False,3139,59
-320,South America,Alternative,False,3643,59
-321,Europe,Alternative,False,6968,59
-322,North America,Pop,False,4898,59
-323,Asia,Jazz,True,457,59
-324,Asia,Alternative,False,863,59
-325,Europe,Electronic,False,1162,59
-326,Africa,Jazz,False,2718,59
-327,Europe,Blues,False,1785,59
-328,Europe,Electronic,False,390,59
-329,South America,Blues,False,2823,60
-330,North America,Alternative,False,940,60
-331,Europe,Alternative,False,3185,60
-332,Oceana,Hip-hop,True,576,60
-333,Europe,Blues,False,259,60
-334,South America,Alternative,False,367,60
-335,Europe,Jazz,False,2598,60
-336,Africa,Alternative,False,3001,60
-337,Asia,Alternative,True,4026,60
-338,South America,Alternative,False,78,60
-339,North America,Jazz,False,2354,60
-340,South America,Alternative,False,1299,61
-341,South America,Pop,False,273,61
-342,North America,Electronic,True,286,61
-343,North America,Rock,False,4992,61
-344,South America,Alternative,False,2009,61
-345,North America,Jazz,False,4325,61
-346,North America,Blues,False,255,61
-347,North America,Electronic,False,612,61
-348,North America,Blues,False,387,61
-349,Africa,Pop,False,2784,61
-350,Africa,Blues,False,4071,61
-351,South America,Electronic,True,6392,62
-352,South America,Jazz,False,282,62
-353,North America,Blues,False,2413,62
-354,North America,Classical,False,443,62
-355,North America,Alternative,False,3608,62
-356,North America,Blues,False,929,62
-357,South America,Jazz,False,2765,62
-358,North America,Pop,False,876,62
-359,North America,Blues,False,559,62
-360,North America,Pop,False,2540,62
-361,Europe,Classical,False,590,62
-362,North America,Pop,False,4753,62
-363,South America,Jazz,False,397,63
-364,Asia,Jazz,False,353,63
-365,North America,Jazz,False,285,63
-366,North America,Pop,False,410,63
-367,North America,Pop,True,339,63
-368,Europe,Jazz,False,286,63
-369,Asia,Jazz,False,3039,63
-370,Europe,Jazz,False,3744,63
-371,South America,Alternative,False,61,63
-372,North America,Pop,False,440,63
-373,Oceana,Blues,False,515,63
-374,Africa,Hip-hop,False,2822,63
-375,South America,Classical,False,523,64
-376,South America,Pop,False,132,64
-377,Asia,Alternative,False,2085,64
-378,Africa,Jazz,False,2217,64
-379,Oceana,Jazz,False,443,64
-380,North America,Rock,False,4321,64
-381,North America,Jazz,False,237,64
-382,Europe,Jazz,False,152,64
-383,South America,Alternative,False,395,64
-384,Europe,Classical,True,308,64
-385,South America,Pop,False,542,64
-386,Europe,Jazz,False,2203,64
-387,Europe,Alternative,False,343,65
-388,Asia,Jazz,False,389,65
-389,North America,Rock,False,2359,65
-390,Africa,Blues,False,144,65
-391,North America,Jazz,False,315,65
-392,Europe,Rock,False,4361,65
-393,North America,Jazz,False,308,65
-394,North America,Rock,False,2240,65
-395,Asia,Rock,False,5052,65
-396,North America,Alternative,True,1203,65
-397,Europe,Alternative,False,230,65
-398,North America,Pop,False,932,65
-399,Africa,Jazz,False,2406,66
-400,Europe,Jazz,False,1889,66
-401,North America,Electronic,True,1390,66
-402,Europe,Jazz,False,1306,66
-403,Europe,Pop,False,2665,66
-404,South America,Rock,False,2052,66
-405,North America,Jazz,True,267,66
-406,North America,Jazz,False,1456,66
-407,Asia,Rock,False,428,66
-408,Asia,Blues,False,2569,66
-409,Europe,Jazz,False,259,66
-410,Asia,Jazz,False,3544,66
-411,North America,Alternative,False,5382,66
-412,South America,Classical,False,255,67
-413,Africa,Blues,False,1314,67
-414,Europe,Alternative,False,327,67
-415,Europe,Classical,False,156,67
-416,Europe,Alternative,False,220,67
-417,North America,Jazz,False,964,67
-418,South America,Jazz,True,2590,67
-419,North America,Jazz,False,2087,67
-420,Africa,Rock,False,1954,67
-421,Europe,Pop,False,795,67
-422,North America,Alternative,False,2262,67
-423,South America,Alternative,False,1088,67
-424,Asia,Jazz,False,336,67
-425,North America,Jazz,False,517,68
-426,Europe,Pop,False,1043,68
-427,South America,Alternative,False,2669,68
-428,South America,Rock,False,2765,68
-429,South America,Jazz,False,312,68
-430,North America,Rock,False,1222,68
-431,South America,Jazz,False,2084,68
-432,Europe,Alternative,False,1886,68
-433,Asia,Electronic,False,1032,68
-434,North America,Jazz,False,894,68
-435,Europe,Blues,False,113,68
-436,North America,Blues,False,290,68
-437,South America,Jazz,False,367,68
-438,South America,Electronic,False,322,69
-439,South America,Alternative,False,151,69
-440,Asia,Alternative,False,1392,69
-441,North America,Pop,False,400,69
-442,North America,Hip-hop,False,266,69
-443,North America,Blues,False,125,69
-444,North America,Alternative,False,2133,69
-445,Asia,Alternative,False,131,69
-446,North America,Pop,False,1763,69
-447,Europe,Rock,False,2776,69
-448,North America,Rock,False,3722,69
-449,Europe,Pop,False,61,69
-450,North America,Rock,False,368,69
-451,North America,Alternative,False,2300,70
-452,North America,Jazz,False,272,70
-453,North America,Rock,False,256,70
-454,Asia,Classical,False,363,70
-455,North America,Electronic,False,286,70
-456,Asia,Alternative,False,241,70
-457,Africa,Alternative,False,437,70
-458,Africa,Blues,False,134,70
-459,Europe,Alternative,False,2168,70
-460,Europe,Alternative,False,155,70
-461,Asia,Jazz,False,1867,70
-462,Africa,Alternative,False,2056,70
-463,North America,Blues,False,906,70
-464,Asia,Alternative,False,738,70
-465,North America,Jazz,False,3259,71
-466,Europe,Classical,False,625,71
-467,South America,Blues,False,334,71
-468,Europe,Alternative,False,1362,71
-469,Oceana,Alternative,False,607,71
-470,Africa,Alternative,False,369,71
-471,Europe,Alternative,False,2022,71
-472,North America,Jazz,False,888,71
-473,North America,Jazz,False,2413,71
-474,Asia,Blues,False,50,71
-475,South America,Jazz,False,3382,71
-476,South America,Rock,True,2321,71
-477,Asia,Pop,False,2044,71
-478,Asia,Jazz,False,166,71
-479,Oceana,Electronic,False,1797,72
-480,Asia,Rock,False,567,72
-481,South America,Blues,False,2078,72
-482,North America,Alternative,True,1825,72
-483,Asia,Jazz,False,100,72
-484,North America,Blues,False,1610,72
-485,Asia,Jazz,False,173,72
-486,North America,Jazz,False,1965,72
-487,Europe,Jazz,False,170,72
-488,South America,Jazz,False,219,72
-489,South America,Jazz,False,1866,72
-490,North America,Alternative,False,124,72
-491,Europe,Alternative,False,233,72
-492,South America,Jazz,False,262,72
-493,Asia,Jazz,False,158,73
-494,North America,Electronic,False,1936,73
-495,South America,Alternative,False,132,73
-496,Asia,Blues,False,266,73
-497,North America,Classical,False,263,73
-498,North America,Rock,False,1424,73
-499,Europe,Rock,False,2299,73
-500,Africa,Alternative,False,254,73
-501,North America,Pop,False,175,73
-502,Europe,Electronic,False,221,73
-503,Africa,Alternative,False,225,73
-504,Asia,Alternative,False,1531,73
-505,South America,Jazz,True,2043,73
-506,South America,Alternative,False,134,73
-507,Asia,Pop,False,2566,73
-508,North America,Alternative,True,338,74
-509,Europe,Blues,False,140,74
-510,North America,Electronic,False,1297,74
-511,Oceana,Alternative,False,1415,74
-512,Europe,Jazz,False,129,74
-513,Africa,Blues,False,524,74
-514,North America,Jazz,False,1687,74
-515,Asia,Rock,False,234,74
-516,Asia,Pop,False,302,74
-517,South America,Electronic,False,1108,74
-518,Europe,Alternative,False,131,74
-519,Europe,Blues,False,707,74
-520,North America,Classical,True,2420,74
-521,North America,Pop,False,194,74
-522,Europe,Jazz,True,81,74
-523,Africa,Electronic,False,268,75
-524,North America,Pop,False,91,75
-525,Africa,Jazz,False,1274,75
-526,Asia,Jazz,False,568,75
-527,Europe,Pop,False,194,75
-528,North America,Alternative,False,230,75
-529,North America,Alternative,False,995,75
-530,North America,Rock,True,843,75
-531,Europe,Classical,False,206,75
-532,South America,Hip-hop,False,1090,75
-533,Europe,Electronic,False,127,75
-534,Europe,Rock,False,1329,75
-535,Africa,Jazz,False,179,75
-536,Asia,Classical,False,210,75
-537,Asia,Jazz,False,1744,75
-538,Europe,Alternative,False,410,76
-539,Africa,Alternative,False,107,76
-540,North America,Blues,False,2569,76
-541,Asia,Jazz,False,57,76
-542,Europe,Pop,False,115,76
-543,Europe,Rock,False,207,76
-544,North America,Alternative,True,216,76
-545,North America,Alternative,False,87,76
-546,Europe,Jazz,False,1337,76
-547,North America,Rock,False,227,76
-548,Asia,Alternative,False,611,76
-549,South America,Jazz,False,247,76
-550,Asia,Jazz,True,4113,76
-551,Africa,Electronic,False,399,76
-552,Europe,Blues,True,244,76
-553,Europe,Jazz,False,272,77
-554,Africa,Electronic,False,1056,77
-555,South America,Jazz,False,1520,77
-556,North America,Pop,False,136,77
-557,North America,Classical,True,74,77
-558,Europe,Blues,False,229,77
-559,North America,Classical,False,103,77
-560,Europe,Jazz,False,1780,77
-561,Europe,Jazz,False,192,77
-562,North America,Electronic,False,1416,77
-563,South America,Jazz,True,16,77
-564,Europe,Pop,False,90,77
-565,South America,Alternative,False,63,77
-566,North America,Electronic,False,1673,77
-567,North America,Blues,False,1188,77
-568,South America,Electronic,False,180,77
-569,North America,Electronic,False,212,78
-570,South America,Pop,False,204,78
-571,Africa,Jazz,False,133,78
-572,South America,Pop,False,195,78
-573,North America,Jazz,False,1439,78
-574,North America,Jazz,False,1158,78
-575,Europe,Alternative,False,72,78
-576,Europe,Jazz,False,135,78
-577,North America,Pop,False,150,78
-578,Europe,Alternative,False,1328,78
-579,North America,Jazz,False,97,78
-580,North America,Jazz,False,133,78
-581,Asia,Blues,False,134,78
-582,Africa,Pop,False,82,78
-583,Asia,Alternative,False,209,78
-584,Europe,Electronic,False,108,78
-585,North America,Electronic,False,89,79
-586,South America,Jazz,False,259,79
-587,Europe,Pop,False,110,79
-588,Europe,Electronic,False,2186,79
-589,South America,Alternative,False,133,79
-590,North America,Jazz,False,124,79
-591,Asia,Pop,False,87,79
-592,South America,Jazz,False,63,79
-593,Asia,Blues,False,1304,79
-594,South America,Pop,False,1672,79
-595,Oceana,Alternative,False,80,79
-596,North America,Pop,False,61,79
-597,Europe,Hip-hop,False,1307,79
-598,Asia,Hip-hop,False,80,79
-599,Africa,Jazz,False,53,79
-600,Oceana,Rock,False,239,79
-601,Europe,Jazz,False,2658,80
-602,North America,Blues,False,95,80
-603,Europe,Pop,False,448,80
-604,Oceana,Pop,False,276,80
-605,South America,Blues,False,116,80
-606,Europe,Blues,False,1169,80
-607,Asia,Rock,False,77,80
-608,Europe,Electronic,False,627,80
-609,North America,Jazz,False,137,80
-610,Asia,Pop,False,39,80
-611,South America,Blues,False,58,80
-612,South America,Electronic,False,8,80
-613,Asia,Electronic,False,680,80
-614,North America,Jazz,False,121,80
-615,North America,Blues,False,719,80
-616,North America,Alternative,False,956,80
-617,Europe,Rock,False,168,80
-618,Europe,Classical,True,1200,81
-619,Europe,Rock,False,832,81
-620,Asia,Jazz,True,52,81
-621,Europe,Alternative,True,123,81
-622,North America,Blues,False,61,81
-623,Africa,Electronic,False,63,81
-624,South America,Electronic,False,117,81
-625,Asia,Hip-hop,False,1224,81
-626,South America,Electronic,False,92,81
-627,Europe,Hip-hop,False,105,81
-628,Europe,Classical,False,224,81
-629,North America,Pop,False,145,81
-630,Europe,Jazz,True,72,81
-631,Asia,Pop,False,1115,81
-632,North America,Jazz,False,242,81
-633,North America,Pop,False,89,81
-634,Asia,Blues,False,90,81
-635,North America,Blues,False,60,82
-636,North America,Jazz,False,67,82
-637,South America,Pop,False,57,82
-638,Asia,Jazz,False,50,82
-639,South America,Jazz,False,970,82
-640,Europe,Classical,False,1093,82
-641,Asia,Rock,False,93,82
-642,Europe,Electronic,False,375,82
-643,Africa,Blues,False,94,82
-644,Europe,Jazz,False,345,82
-645,Africa,Alternative,False,96,82
-646,Asia,Classical,False,55,82
-647,South America,Rock,True,56,82
-648,North America,Alternative,False,70,82
-649,Africa,Jazz,False,1007,82
-650,Africa,Rock,False,1493,82
-651,North America,Electronic,False,48,82
-652,South America,Hip-hop,False,55,83
-653,Oceana,Rock,False,588,83
-654,North America,Rock,False,67,83
-655,Asia,Jazz,False,120,83
-656,Africa,Blues,False,42,83
-657,Africa,Alternative,False,52,83
-658,Asia,Jazz,False,567,83
-659,Africa,Blues,False,929,83
-660,Asia,Jazz,False,141,83
-661,Asia,Jazz,False,131,83
-662,South America,Pop,False,599,83
-663,Europe,Jazz,False,100,83
-664,South America,Hip-hop,False,40,83
-665,Africa,Blues,False,1856,83
-666,Africa,Blues,False,73,83
-667,Asia,Blues,False,0,83
-668,Asia,Alternative,False,153,83
-669,Oceana,Pop,False,1124,83
-670,North America,Alternative,False,1113,84
-671,South America,Jazz,True,487,84
-672,Europe,Alternative,False,115,84
-673,Europe,Electronic,False,1026,84
-674,North America,Jazz,False,45,84
-675,Asia,Alternative,False,30,84
-676,Asia,Pop,False,552,84
-677,South America,Pop,False,1092,84
-678,Asia,Pop,False,54,84
-679,North America,Electronic,False,19,84
-680,North America,Jazz,False,32,84
-681,Europe,Jazz,True,703,84
-682,Asia,Electronic,False,984,84
-683,Europe,Hip-hop,False,81,84
-684,Asia,Jazz,False,62,84
-685,Asia,Jazz,False,88,84
-686,Europe,Alternative,False,77,84
-687,Asia,Blues,False,709,84
-688,Oceana,Alternative,False,828,85
-689,North America,Rock,False,7,85
-690,Africa,Jazz,False,471,85
-691,Asia,Classical,True,230,85
-692,North America,Jazz,False,21,85
-693,North America,Electronic,False,100,85
-694,Africa,Classical,False,214,85
-695,Europe,Alternative,False,63,85
-696,North America,Jazz,False,25,85
-697,North America,Jazz,True,18,85
-698,Asia,Hip-hop,False,101,85
-699,North America,Jazz,False,929,85
-700,Africa,Electronic,False,42,85
-701,South America,Alternative,False,171,85
-702,North America,Electronic,False,51,85
-703,Africa,Jazz,True,671,85
-704,North America,Hip-hop,False,21,85
-705,Europe,Blues,False,97,85
-706,Europe,Classical,False,557,86
-707,South America,Rock,False,10,86
-708,North America,Alternative,False,82,86
-709,North America,Jazz,False,310,86
-710,South America,Alternative,False,690,86
-711,South America,Alternative,False,58,86
-712,North America,Jazz,False,333,86
-713,Europe,Rock,False,79,86
-714,North America,Alternative,False,288,86
-715,Asia,Hip-hop,False,45,86
-716,South America,Alternative,False,44,86
-717,North America,Alternative,False,77,86
-718,North America,Jazz,False,175,86
-719,South America,Rock,True,948,86
-720,Oceana,Pop,False,50,86
-721,South America,Jazz,True,50,86
-722,North America,Rock,False,801,86
-723,South America,Jazz,True,28,86
-724,North America,Electronic,False,14,86
-725,North America,Jazz,False,96,87
-726,Europe,Electronic,True,154,87
-727,North America,Jazz,False,60,87
-728,North America,Blues,False,736,87
-729,Asia,Pop,True,32,87
-730,North America,Classical,False,660,87
-731,North America,Alternative,False,15,87
-732,Asia,Jazz,False,42,87
-733,South America,Pop,False,82,87
-734,South America,Alternative,False,870,87
-735,Europe,Rock,False,23,87
-736,Europe,Alternative,False,415,87
-737,North America,Blues,True,371,87
-738,Asia,Jazz,False,21,87
-739,Europe,Blues,False,65,87
-740,South America,Alternative,False,13,87
-741,Africa,Blues,False,24,87
-742,North America,Pop,False,137,87
-743,Africa,Rock,False,32,87
-744,Europe,Pop,False,450,88
-745,South America,Blues,False,29,88
-746,Europe,Hip-hop,False,110,88
-747,Europe,Electronic,False,27,88
-748,South America,Electronic,False,38,88
-749,North America,Blues,False,46,88
-750,Europe,Alternative,True,32,88
-751,North America,Blues,False,53,88
-752,North America,Pop,False,62,88
-753,Europe,Blues,True,24,88
-754,North America,Jazz,False,429,88
-755,North America,Alternative,True,48,88
-756,Europe,Hip-hop,False,311,88
-757,Asia,Pop,False,64,88
-758,North America,Electronic,False,0,88
-759,North America,Rock,False,32,88
-760,South America,Blues,False,1,88
-761,North America,Jazz,False,162,88
-762,Asia,Alternative,False,682,88
-763,South America,Jazz,False,28,89
-764,North America,Jazz,False,8,89
-765,Asia,Jazz,True,36,89
-766,Oceana,Pop,False,2,89
-767,North America,Rock,False,19,89
-768,Asia,Pop,False,46,89
-769,Europe,Jazz,True,11,89
-770,North America,Pop,False,570,89
-771,North America,Jazz,False,27,89
-772,Europe,Electronic,False,16,89
-773,Asia,Classical,False,21,89
-774,North America,Classical,False,21,89
-775,Africa,Pop,True,550,89
-776,North America,Electronic,False,27,89
-777,Africa,Blues,False,558,89
-778,North America,Pop,False,21,89
-779,Europe,Alternative,False,14,89
-780,Oceana,Pop,False,607,89
-781,South America,Blues,False,63,89
-782,North America,Electronic,False,32,89
-783,South America,Alternative,False,49,90
-784,South America,Pop,False,0,90
-785,Asia,Electronic,False,609,90
-786,North America,Electronic,False,7,90
-787,Europe,Pop,False,596,90
-788,Africa,Rock,False,49,90
-789,North America,Rock,False,18,90
-790,South America,Electronic,False,11,90
-791,Europe,Alternative,False,31,90
-792,Europe,Blues,False,29,90
-793,North America,Alternative,False,24,90
-794,North America,Electronic,False,56,90
-795,Asia,Hip-hop,False,39,90
-796,North America,Alternative,False,41,90
-797,North America,Pop,False,43,90
-798,Oceana,Hip-hop,False,6,90
-799,Asia,Jazz,False,13,90
-800,Asia,Electronic,False,0,90
-801,North America,Blues,False,0,90
-802,North America,Jazz,False,568,90
-803,North America,Rock,False,10,91
-804,South America,Blues,False,37,91
-805,Europe,Hip-hop,False,24,91
-806,Africa,Blues,False,34,91
-807,Europe,Jazz,False,27,91
-808,Asia,Alternative,False,18,91
-809,South America,Blues,False,4,91
-810,North America,Jazz,False,425,91
-811,South America,Pop,False,13,91
-812,Asia,Electronic,False,221,91
-813,Europe,Alternative,False,32,91
-814,North America,Alternative,False,14,91
-815,Africa,Jazz,False,10,91
-816,North America,Electronic,False,30,91
-817,Asia,Alternative,False,46,91
-818,Europe,Classical,False,511,91
-819,Oceana,Jazz,False,48,91
-820,South America,Blues,False,22,91
-821,South America,Jazz,False,16,91
-822,Europe,Classical,False,27,91
-823,North America,Rock,False,24,92
-824,Africa,Pop,False,0,92
-825,Europe,Jazz,False,20,92
-826,South America,Jazz,False,18,92
-827,Asia,Pop,False,6,92
-828,Asia,Hip-hop,False,32,92
-829,South America,Pop,False,10,92
-830,Oceana,Jazz,False,13,92
-831,Europe,Blues,False,19,92
-832,Africa,Jazz,False,11,92
-833,Asia,Alternative,False,16,92
-834,Europe,Blues,False,37,92
-835,Asia,Electronic,False,3,92
-836,Europe,Jazz,False,39,92
-837,Africa,Pop,False,11,92
-838,Africa,Pop,False,23,92
-839,Asia,Alternative,False,9,92
-840,North America,Hip-hop,True,20,92
-841,North America,Pop,False,0,92
-842,Africa,Jazz,True,321,92
-843,Europe,Jazz,False,0,92
-844,Asia,Hip-hop,False,11,93
-845,Asia,Alternative,False,15,93
-846,North America,Jazz,False,11,93
-847,Europe,Blues,False,0,93
-848,Africa,Pop,True,26,93
-849,South America,Alternative,False,0,93
-850,North America,Alternative,False,9,93
-851,Africa,Electronic,False,15,93
-852,South America,Alternative,False,18,93
-853,Europe,Hip-hop,False,0,93
-854,South America,Classical,False,31,93
-855,Asia,Alternative,False,11,93
-856,North America,Electronic,True,8,93
-857,North America,Alternative,False,84,93
-858,South America,Alternative,False,244,93
-859,Asia,Electronic,False,225,93
-860,South America,Electronic,False,10,93
-861,North America,Jazz,True,3,93
-862,South America,Jazz,False,18,93
-863,Europe,Jazz,False,20,93
-864,Africa,Electronic,False,0,93
-865,Europe,Jazz,False,9,94
-866,South America,Jazz,False,4,94
-867,North America,Electronic,False,5,94
-868,North America,Blues,False,16,94
-869,North America,Jazz,True,0,94
-870,South America,Pop,False,10,94
-871,Asia,Jazz,False,0,94
-872,Europe,Electronic,False,11,94
-873,South America,Alternative,False,0,94
-874,North America,Electronic,False,14,94
-875,Asia,Alternative,False,17,94
-876,Oceana,Alternative,True,11,94
-877,Europe,Rock,True,76,94
-878,North America,Electronic,True,0,94
-879,South America,Alternative,False,27,94
-880,South America,Alternative,False,29,94
-881,Europe,Blues,False,8,94
-882,Africa,Blues,False,7,94
-883,North America,Alternative,False,5,94
-884,North America,Pop,False,24,94
-885,North America,Jazz,False,4,94
-886,North America,Rock,False,15,95
-887,North America,Alternative,False,14,95
-888,South America,Alternative,True,8,95
-889,Asia,Rock,False,555,95
-890,Europe,Rock,False,2,95
-891,Europe,Alternative,False,224,95
-892,Europe,Jazz,False,20,95
-893,Africa,Jazz,False,1,95
-894,Asia,Blues,False,19,95
-895,North America,Blues,False,0,95
-896,South America,Electronic,False,2,95
-897,Asia,Jazz,False,0,95
-898,North America,Alternative,False,0,95
-899,South America,Pop,True,24,95
-900,North America,Pop,False,13,95
-901,South America,Rock,False,14,95
-902,South America,Jazz,False,237,95
-903,Asia,Hip-hop,True,11,95
-904,Asia,Alternative,False,13,95
-905,North America,Jazz,True,0,95
-906,Africa,Pop,False,6,95
-907,Africa,Rock,False,0,95
-908,North America,Classical,False,0,96
-909,Asia,Blues,False,4,96
-910,South America,Electronic,False,7,96
-911,South America,Classical,False,0,96
-912,North America,Alternative,False,0,96
-913,North America,Blues,False,8,96
-914,South America,Jazz,False,0,96
-915,Europe,Rock,False,7,96
-916,North America,Alternative,False,0,96
-917,South America,Jazz,False,0,96
-918,South America,Hip-hop,False,85,96
-919,Asia,Alternative,False,8,96
-920,North America,Pop,False,5,96
-921,Oceana,Blues,False,66,96
-922,South America,Alternative,False,12,96
-923,Europe,Jazz,False,0,96
-924,North America,Pop,False,0,96
-925,Europe,Alternative,False,0,96
-926,Europe,Alternative,False,3,96
-927,Oceana,Electronic,False,0,96
-928,North America,Blues,False,16,96
-929,North America,Electronic,False,1,96
-930,Europe,Pop,True,14,97
-931,Europe,Alternative,False,0,97
-932,Europe,Blues,False,0,97
-933,Africa,Hip-hop,False,0,97
-934,North America,Electronic,False,0,97
-935,South America,Hip-hop,False,6,97
-936,Asia,Alternative,False,8,97
-937,Europe,Alternative,False,0,97
-938,North America,Jazz,False,9,97
-939,Asia,Jazz,False,66,97
-940,North America,Alternative,False,7,97
-941,North America,Jazz,False,0,97
-942,North America,Electronic,False,5,97
-943,North America,Alternative,False,0,97
-944,South America,Pop,False,0,97
-945,North America,Jazz,False,0,97
-946,North America,Blues,False,1,97
-947,Asia,Hip-hop,False,4,97
-948,Europe,Alternative,False,3,97
-949,Asia,Rock,False,0,97
-950,Europe,Jazz,False,0,97
-951,Europe,Rock,False,0,97
-952,North America,Electronic,True,3,98
-953,Africa,Pop,False,3,98
-954,Africa,Electronic,False,0,98
-955,Asia,Blues,False,0,98
-956,North America,Classical,False,3,98
-957,South America,Alternative,False,0,98
-958,South America,Rock,False,2,98
-959,North America,Rock,False,5,98
-960,North America,Pop,False,2,98
-961,Asia,Jazz,True,0,98
-962,Europe,Alternative,False,3,98
-963,Europe,Blues,False,5,98
-964,Europe,Alternative,False,6,98
-965,North America,Pop,False,0,98
-966,North America,Pop,False,0,98
-967,Europe,Electronic,True,1,98
-968,Asia,Classical,False,0,98
-969,Asia,Rock,True,0,98
-970,Europe,Pop,False,0,98
-971,North America,Alternative,False,2,98
-972,Europe,Jazz,False,4,98
-973,North America,Hip-hop,False,1,98
-974,Oceana,Alternative,False,0,98
-975,Europe,Hip-hop,False,0,99
-976,Asia,Blues,False,2,99
-977,South America,Blues,False,2,99
-978,Africa,Hip-hop,False,0,99
-979,Europe,Jazz,False,0,99
-980,Asia,Rock,False,0,99
-981,Asia,Rock,True,0,99
-982,North America,Electronic,False,0,99
-983,Europe,Blues,False,1,99
-984,North America,Jazz,False,2,99
-985,Asia,Alternative,False,0,99
-986,North America,Jazz,False,0,99
-987,North America,Jazz,False,0,99
-988,Africa,Pop,True,3,99
-989,North America,Blues,False,0,99
-990,Africa,Electronic,False,0,99
-991,North America,Blues,False,0,99
-992,Africa,Electronic,False,0,99
-993,North America,Blues,False,0,99
-994,North America,Jazz,False,0,99
-995,Africa,Electronic,False,0,99
-996,North America,Blues,False,1,99
-997,North America,Pop,False,0,99
+0,Oceana,Jazz,True,46678,0
+1,Europe,Electronic,False,8543,0
+2,North America,Jazz,True,24151,1
+3,North America,Jazz,True,41359,1
+4,South America,Jazz,False,4937,2
+5,North America,Pop,False,12625,2
+6,Africa,Alternative,False,8429,3
+7,Europe,Jazz,True,23483,3
+8,Asia,Classical,True,27001,4
+9,North America,Blues,False,6475,4
+10,North America,Alternative,True,29766,5
+11,North America,Rock,False,12626,5
+12,North America,Jazz,False,9324,6
+13,Asia,Jazz,False,13638,6
+14,Africa,Electronic,True,35417,7
+15,North America,Blues,False,10342,7
+16,North America,Alternative,False,16976,8
+17,Oceana,Classical,False,7188,8
+18,North America,Blues,False,4885,9
+19,North America,Hip-hop,False,15456,9
+20,North America,Blues,False,5266,9
+21,Asia,Pop,False,6880,10
+22,South America,Electronic,False,12005,10
+23,South America,Rock,True,34458,10
+24,Europe,Alternative,False,9368,11
+25,Africa,Rock,True,34290,11
+26,South America,Jazz,False,7762,11
+27,Europe,Alternative,False,12536,12
+28,Europe,Jazz,False,5801,12
+29,Europe,Jazz,True,21470,12
+30,North America,Jazz,False,11399,13
+31,South America,Blues,False,14884,13
+32,Africa,Pop,True,20929,13
+33,South America,Jazz,True,37518,14
+34,North America,Classical,False,12162,14
+35,South America,Classical,False,9298,14
+36,Europe,Classical,False,6534,15
+37,South America,Pop,True,23778,15
+38,South America,Alternative,False,7794,15
+39,Europe,Pop,False,18266,16
+40,South America,Blues,False,9038,16
+41,Oceana,Pop,False,11618,16
+42,South America,Alternative,False,8059,17
+43,South America,Pop,False,5083,17
+44,Europe,Blues,False,2970,17
+45,South America,Blues,False,11030,18
+46,Africa,Rock,False,7993,18
+47,North America,Alternative,False,6854,18
+48,Europe,Hip-hop,False,13648,19
+49,South America,Alternative,False,9410,19
+50,Europe,Rock,False,4134,19
+51,Europe,Pop,False,12056,19
+52,Europe,Electronic,False,9671,20
+53,North America,Rock,False,4359,20
+54,South America,Classical,False,17426,20
+55,North America,Pop,False,5267,20
+56,North America,Electronic,False,2406,21
+57,Asia,Jazz,False,8113,21
+58,South America,Blues,False,8971,21
+59,South America,Blues,False,3024,21
+60,North America,Electronic,False,13418,22
+61,North America,Rock,False,9475,22
+62,North America,Pop,False,13792,22
+63,Europe,Classical,False,6365,22
+64,Europe,Pop,False,10048,23
+65,North America,Hip-hop,False,17615,23
+66,North America,Alternative,False,4885,23
+67,South America,Alternative,False,8889,23
+68,Oceana,Jazz,False,11409,24
+69,South America,Pop,False,19299,24
+70,North America,Rock,False,14629,24
+71,Africa,Alternative,True,4629,24
+72,Europe,Alternative,False,14364,25
+73,Asia,Alternative,False,14938,25
+74,South America,Jazz,False,5063,25
+75,North America,Electronic,False,9894,25
+76,Europe,Classical,False,2782,26
+77,North America,Jazz,False,2073,26
+78,North America,Pop,False,15092,26
+79,North America,Blues,False,8556,26
+80,Africa,Alternative,False,16374,26
+81,Asia,Alternative,True,16933,27
+82,North America,Alternative,False,2971,27
+83,Europe,Pop,False,10994,27
+84,North America,Electronic,False,5252,27
+85,North America,Alternative,False,2971,27
+86,South America,Alternative,False,1750,28
+87,North America,Alternative,False,12427,28
+88,North America,Rock,False,13743,28
+89,South America,Alternative,False,4814,28
+90,Oceana,Alternative,True,11509,28
+91,Europe,Jazz,False,5555,29
+92,North America,Blues,True,1388,29
+93,Oceana,Jazz,False,9003,29
+94,Asia,Jazz,False,18565,29
+95,North America,Hip-hop,False,2389,29
+96,North America,Blues,False,6951,30
+97,Africa,Pop,False,3928,30
+98,North America,Rock,False,2593,30
+99,South America,Rock,False,4853,30
+100,South America,Rock,False,11136,30
+101,Asia,Alternative,False,2590,31
+102,North America,Electronic,False,4782,31
+103,Europe,Alternative,False,7500,31
+104,North America,Jazz,False,7663,31
+105,North America,Jazz,True,2593,31
+106,North America,Pop,False,16727,32
+107,South America,Hip-hop,False,5450,32
+108,North America,Jazz,False,2280,32
+109,North America,Alternative,False,3170,32
+110,North America,Jazz,False,2651,32
+111,Africa,Jazz,False,6245,33
+112,North America,Rock,False,11205,33
+113,North America,Blues,False,7638,33
+114,Europe,Pop,False,2607,33
+115,South America,Pop,False,6188,33
+116,Europe,Pop,False,6425,33
+117,North America,Classical,False,10132,34
+118,North America,Blues,False,16348,34
+119,Europe,Pop,True,4711,34
+120,North America,Classical,False,10781,34
+121,Europe,Jazz,False,4803,34
+122,North America,Hip-hop,False,1435,34
+123,Asia,Jazz,False,8087,35
+124,Europe,Jazz,False,7102,35
+125,North America,Blues,False,1873,35
+126,Europe,Hip-hop,False,15750,35
+127,Europe,Alternative,False,5358,35
+128,Asia,Jazz,False,3249,35
+129,Africa,Hip-hop,False,9606,36
+130,Africa,Blues,False,2096,36
+131,North America,Alternative,False,5188,36
+132,Africa,Alternative,False,2675,36
+133,South America,Jazz,False,3936,36
+134,South America,Rock,False,8633,36
+135,Africa,Jazz,False,2705,37
+136,North America,Jazz,False,5042,37
+137,South America,Alternative,False,4677,37
+138,South America,Jazz,False,2777,37
+139,Europe,Pop,False,9619,37
+140,North America,Pop,True,4053,37
+141,North America,Rock,False,5040,38
+142,South America,Electronic,False,1637,38
+143,South America,Blues,False,2515,38
+144,Africa,Pop,False,1554,38
+145,Europe,Jazz,False,3423,38
+146,North America,Alternative,False,3221,38
+147,Asia,Jazz,False,9185,39
+148,North America,Jazz,False,2446,39
+149,Europe,Electronic,False,5598,39
+150,Africa,Classical,False,6628,39
+151,Asia,Blues,False,7943,39
+152,South America,Electronic,True,9872,39
+153,Asia,Pop,False,4618,39
+154,South America,Jazz,False,8832,40
+155,Europe,Jazz,False,9652,40
+156,North America,Alternative,False,8341,40
+157,North America,Blues,False,6529,40
+158,North America,Hip-hop,True,10447,40
+159,South America,Blues,False,2633,40
+160,South America,Blues,False,3692,40
+161,Asia,Jazz,False,6360,41
+162,Europe,Jazz,True,2528,41
+163,North America,Jazz,False,2915,41
+164,Oceana,Alternative,False,2827,41
+165,North America,Jazz,False,1914,41
+166,Africa,Alternative,False,5217,41
+167,South America,Pop,False,8734,41
+168,South America,Alternative,False,4357,42
+169,North America,Alternative,False,5262,42
+170,Europe,Jazz,False,2480,42
+171,South America,Pop,False,7680,42
+172,Europe,Jazz,False,1346,42
+173,Africa,Hip-hop,False,825,42
+174,South America,Jazz,False,9279,42
+175,South America,Jazz,False,9084,43
+176,Europe,Blues,False,7538,43
+177,North America,Rock,False,949,43
+178,North America,Alternative,False,684,43
+179,Europe,Electronic,False,1994,43
+180,Asia,Jazz,False,2762,43
+181,North America,Rock,False,5736,43
+182,Europe,Classical,False,642,44
+183,Europe,Blues,False,5238,44
+184,Oceana,Jazz,False,4113,44
+185,Europe,Alternative,False,1486,44
+186,North America,Jazz,False,1245,44
+187,North America,Pop,False,10646,44
+188,Europe,Classical,False,7540,44
+189,Europe,Pop,False,3996,44
+190,South America,Classical,False,1244,45
+191,Asia,Jazz,True,2648,45
+192,Africa,Electronic,False,1139,45
+193,North America,Blues,False,672,45
+194,Africa,Rock,False,983,45
+195,North America,Pop,False,589,45
+196,Europe,Jazz,False,966,45
+197,Asia,Alternative,False,4227,45
+198,North America,Alternative,True,807,46
+199,North America,Jazz,False,3912,46
+200,North America,Rock,False,2025,46
+201,Asia,Alternative,False,1648,46
+202,Africa,Rock,False,1135,46
+203,Europe,Pop,True,7282,46
+204,Europe,Pop,False,1517,46
+205,North America,Pop,False,4824,46
+206,Africa,Rock,False,896,47
+207,North America,Blues,False,3579,47
+208,North America,Jazz,False,3980,47
+209,North America,Rock,False,3111,47
+210,North America,Jazz,False,986,47
+211,North America,Electronic,False,6548,47
+212,Asia,Jazz,False,524,47
+213,South America,Classical,False,1386,47
+214,Asia,Rock,False,3819,48
+215,Europe,Rock,False,1778,48
+216,North America,Rock,True,1592,48
+217,South America,Jazz,False,3427,48
+218,Europe,Hip-hop,False,1839,48
+219,Asia,Jazz,False,1851,48
+220,Africa,Alternative,False,3797,48
+221,South America,Hip-hop,False,3741,48
+222,South America,Alternative,True,2960,49
+223,Africa,Jazz,False,3257,49
+224,Asia,Jazz,False,601,49
+225,Asia,Rock,False,4523,49
+226,Asia,Blues,False,8365,49
+227,South America,Blues,False,5421,49
+228,Europe,Pop,False,4363,49
+229,South America,Rock,False,765,49
+230,Europe,Jazz,False,5019,49
+231,South America,Pop,False,927,50
+232,North America,Rock,False,912,50
+233,Asia,Alternative,False,1644,50
+234,Asia,Alternative,False,3567,50
+235,Europe,Classical,True,1152,50
+236,Europe,Jazz,False,1302,50
+237,South America,Pop,False,3861,50
+238,Asia,Alternative,False,5822,50
+239,Europe,Alternative,False,2546,50
+240,North America,Hip-hop,False,3802,51
+241,Europe,Electronic,False,3210,51
+242,North America,Blues,False,1067,51
+243,Europe,Blues,False,8791,51
+244,North America,Jazz,False,871,51
+245,Asia,Hip-hop,False,3161,51
+246,Asia,Jazz,False,2887,51
+247,South America,Alternative,False,4808,51
+248,Europe,Jazz,True,877,51
+249,North America,Jazz,False,6352,52
+250,South America,Alternative,False,2868,52
+251,North America,Jazz,False,1335,52
+252,Asia,Pop,False,2854,52
+253,North America,Jazz,False,5762,52
+254,North America,Electronic,False,601,52
+255,Europe,Blues,False,408,52
+256,South America,Blues,False,5999,52
+257,South America,Pop,False,719,52
+258,Africa,Rock,False,3634,53
+259,North America,Jazz,False,430,53
+260,Asia,Jazz,False,401,53
+261,South America,Blues,False,2663,53
+262,North America,Alternative,False,1021,53
+263,Asia,Electronic,True,3896,53
+264,Asia,Blues,False,5020,53
+265,South America,Classical,False,3892,53
+266,Africa,Hip-hop,False,731,53
+267,Asia,Blues,False,672,54
+268,Asia,Hip-hop,False,3567,54
+269,North America,Alternative,False,1102,54
+270,Oceana,Alternative,False,2896,54
+271,North America,Pop,False,917,54
+272,North America,Hip-hop,False,2836,54
+273,Asia,Electronic,False,1556,54
+274,Europe,Electronic,True,1545,54
+275,Europe,Blues,False,5846,54
+276,North America,Jazz,False,968,54
+277,North America,Jazz,False,760,55
+278,South America,Blues,False,351,55
+279,South America,Electronic,False,777,55
+280,South America,Rock,False,1354,55
+281,Asia,Jazz,False,3486,55
+282,Asia,Rock,False,2300,55
+283,North America,Jazz,False,2762,55
+284,North America,Rock,False,524,55
+285,South America,Classical,False,4820,55
+286,North America,Rock,False,646,55
+287,Oceana,Alternative,False,3532,56
+288,South America,Electronic,False,7800,56
+289,Europe,Blues,False,473,56
+290,South America,Electronic,False,495,56
+291,South America,Blues,False,348,56
+292,Africa,Rock,False,4274,56
+293,South America,Jazz,False,3243,56
+294,Africa,Electronic,False,9240,56
+295,North America,Jazz,False,4707,56
+296,South America,Jazz,False,3230,56
+297,South America,Electronic,False,2976,57
+298,Europe,Jazz,False,810,57
+299,Europe,Alternative,False,3102,57
+300,North America,Jazz,False,611,57
+301,South America,Blues,False,613,57
+302,Europe,Rock,False,1034,57
+303,Europe,Jazz,False,1090,57
+304,Asia,Hip-hop,True,2705,57
+305,Europe,Jazz,False,492,57
+306,Africa,Blues,False,4933,57
+307,North America,Alternative,False,9921,58
+308,Europe,Jazz,False,266,58
+309,North America,Alternative,False,3769,58
+310,Europe,Hip-hop,True,6401,58
+311,South America,Pop,False,638,58
+312,Africa,Pop,False,434,58
+313,Africa,Rock,False,588,58
+314,Oceana,Blues,False,3412,58
+315,North America,Jazz,False,3227,58
+316,North America,Blues,False,1022,58
+317,North America,Blues,False,997,58
+318,North America,Jazz,False,4734,59
+319,North America,Electronic,False,645,59
+320,South America,Jazz,False,2260,59
+321,Asia,Blues,False,385,59
+322,Africa,Alternative,False,1706,59
+323,Africa,Pop,False,671,59
+324,North America,Jazz,False,1662,59
+325,North America,Electronic,False,2760,59
+326,Europe,Classical,False,4670,59
+327,North America,Jazz,False,2681,59
+328,North America,Alternative,False,5276,59
+329,South America,Pop,False,425,60
+330,South America,Electronic,False,2676,60
+331,Africa,Jazz,False,5353,60
+332,Asia,Blues,False,3977,60
+333,Europe,Alternative,False,6187,60
+334,Europe,Blues,False,3254,60
+335,South America,Pop,True,5961,60
+336,Asia,Hip-hop,False,436,60
+337,South America,Jazz,False,2031,60
+338,South America,Pop,True,255,60
+339,North America,Alternative,False,2542,60
+340,South America,Alternative,False,2984,61
+341,Europe,Blues,False,2222,61
+342,South America,Alternative,False,4375,61
+343,North America,Alternative,False,2791,61
+344,Africa,Jazz,False,1335,61
+345,Europe,Pop,False,2533,61
+346,South America,Jazz,False,555,61
+347,Asia,Pop,False,444,61
+348,Asia,Jazz,False,546,61
+349,Africa,Jazz,True,3644,61
+350,North America,Hip-hop,False,2943,61
+351,Europe,Blues,False,2802,62
+352,Asia,Alternative,False,510,62
+353,Africa,Jazz,False,674,62
+354,South America,Blues,False,443,62
+355,North America,Alternative,False,775,62
+356,Africa,Pop,False,137,62
+357,North America,Alternative,False,1083,62
+358,Europe,Electronic,False,2640,62
+359,South America,Jazz,False,396,62
+360,Europe,Electronic,False,4178,62
+361,North America,Pop,False,4233,62
+362,North America,Jazz,False,957,62
+363,North America,Blues,False,2691,63
+364,Oceana,Electronic,False,341,63
+365,Asia,Jazz,False,255,63
+366,South America,Rock,False,7681,63
+367,North America,Pop,False,5210,63
+368,North America,Blues,False,138,63
+369,Africa,Jazz,False,1914,63
+370,Africa,Rock,False,313,63
+371,Africa,Jazz,False,330,63
+372,North America,Classical,False,1992,63
+373,Asia,Electronic,False,2549,63
+374,Asia,Classical,False,310,63
+375,North America,Blues,False,263,64
+376,Asia,Electronic,False,3984,64
+377,North America,Jazz,False,896,64
+378,North America,Hip-hop,False,442,64
+379,Europe,Alternative,False,254,64
+380,Africa,Jazz,True,924,64
+381,South America,Blues,False,1137,64
+382,Europe,Alternative,False,2214,64
+383,Europe,Alternative,False,2645,64
+384,Europe,Jazz,False,3244,64
+385,Europe,Rock,True,2580,64
+386,North America,Jazz,False,1132,64
+387,Europe,Jazz,False,3854,65
+388,North America,Alternative,False,260,65
+389,North America,Rock,True,1568,65
+390,Europe,Jazz,False,1906,65
+391,Europe,Rock,False,173,65
+392,North America,Pop,False,1824,65
+393,North America,Jazz,False,558,65
+394,North America,Jazz,False,1640,65
+395,Europe,Pop,False,687,65
+396,North America,Electronic,False,240,65
+397,North America,Rock,False,825,65
+398,South America,Jazz,False,3622,65
+399,Europe,Jazz,False,429,66
+400,Africa,Electronic,False,2282,66
+401,South America,Pop,False,332,66
+402,Asia,Pop,True,1474,66
+403,North America,Alternative,False,524,66
+404,North America,Rock,False,2223,66
+405,South America,Pop,False,2123,66
+406,South America,Blues,False,206,66
+407,Europe,Alternative,False,4638,66
+408,Europe,Electronic,False,2157,66
+409,North America,Rock,False,163,66
+410,Europe,Rock,True,2632,66
+411,Europe,Jazz,False,256,66
+412,Europe,Jazz,False,2537,67
+413,Asia,Classical,False,2188,67
+414,Africa,Blues,False,1674,67
+415,North America,Hip-hop,False,441,67
+416,Europe,Jazz,False,1761,67
+417,South America,Classical,False,142,67
+418,North America,Alternative,False,178,67
+419,Asia,Jazz,False,2014,67
+420,Africa,Electronic,False,1283,67
+421,South America,Jazz,False,5262,67
+422,North America,Alternative,True,463,67
+423,South America,Jazz,True,2499,67
+424,South America,Alternative,False,477,67
+425,Europe,Jazz,False,2676,68
+426,North America,Alternative,False,2536,68
+427,Europe,Alternative,False,1611,68
+428,Africa,Hip-hop,False,2033,68
+429,North America,Classical,False,168,68
+430,Asia,Jazz,False,111,68
+431,Africa,Jazz,False,3045,68
+432,South America,Jazz,False,3561,68
+433,Asia,Alternative,False,2495,68
+434,Asia,Hip-hop,False,191,68
+435,Africa,Electronic,False,249,68
+436,Oceana,Electronic,False,285,68
+437,Europe,Electronic,False,1949,68
+438,Europe,Pop,False,494,69
+439,South America,Alternative,False,3587,69
+440,Europe,Pop,False,2503,69
+441,South America,Blues,False,722,69
+442,Africa,Electronic,False,257,69
+443,Europe,Blues,False,297,69
+444,North America,Alternative,False,1903,69
+445,Europe,Rock,True,563,69
+446,Africa,Blues,False,131,69
+447,Europe,Blues,True,1928,69
+448,South America,Pop,False,1891,69
+449,South America,Pop,True,345,69
+450,North America,Alternative,False,198,69
+451,Asia,Blues,False,226,70
+452,Europe,Pop,True,275,70
+453,Europe,Rock,False,219,70
+454,South America,Blues,False,293,70
+455,South America,Jazz,False,2231,70
+456,Asia,Jazz,False,120,70
+457,South America,Electronic,False,2599,70
+458,South America,Classical,True,1357,70
+459,North America,Jazz,False,271,70
+460,Europe,Pop,False,427,70
+461,South America,Blues,False,129,70
+462,North America,Alternative,False,2219,70
+463,North America,Hip-hop,False,225,70
+464,North America,Jazz,True,186,70
+465,Asia,Pop,True,1333,71
+466,Europe,Jazz,False,2805,71
+467,South America,Jazz,False,164,71
+468,Europe,Alternative,False,803,71
+469,North America,Pop,False,256,71
+470,South America,Pop,False,1519,71
+471,Europe,Pop,False,192,71
+472,South America,Pop,False,3175,71
+473,North America,Jazz,False,1751,71
+474,South America,Blues,False,1465,71
+475,North America,Alternative,False,301,71
+476,North America,Pop,True,462,71
+477,North America,Electronic,False,421,71
+478,North America,Blues,True,235,71
+479,South America,Blues,False,1397,72
+480,Asia,Hip-hop,False,186,72
+481,North America,Jazz,False,222,72
+482,North America,Blues,True,149,72
+483,South America,Jazz,False,572,72
+484,Asia,Alternative,False,1929,72
+485,North America,Blues,False,801,72
+486,Asia,Pop,False,1566,72
+487,Europe,Jazz,False,835,72
+488,North America,Alternative,False,837,72
+489,North America,Alternative,False,2397,72
+490,Africa,Blues,False,2424,72
+491,North America,Pop,False,1048,72
+492,South America,Jazz,False,271,72
+493,South America,Jazz,False,1622,73
+494,Europe,Jazz,False,1891,73
+495,Europe,Jazz,False,1142,73
+496,Africa,Blues,False,311,73
+497,North America,Jazz,False,333,73
+498,North America,Rock,False,187,73
+499,Africa,Jazz,False,1098,73
+500,North America,Hip-hop,False,1550,73
+501,Asia,Alternative,False,785,73
+502,Europe,Classical,False,278,73
+503,North America,Blues,False,264,73
+504,Europe,Alternative,False,209,73
+505,Oceana,Alternative,False,1973,73
+506,North America,Blues,False,161,73
+507,Asia,Rock,False,1645,73
+508,South America,Blues,True,1677,74
+509,Europe,Blues,True,281,74
+510,Europe,Alternative,False,137,74
+511,North America,Rock,False,215,74
+512,North America,Jazz,False,205,74
+513,Europe,Pop,False,1271,74
+514,Europe,Pop,False,1503,74
+515,North America,Alternative,True,212,74
+516,North America,Alternative,False,122,74
+517,Europe,Alternative,False,933,74
+518,Asia,Blues,False,172,74
+519,South America,Hip-hop,False,292,74
+520,Europe,Electronic,False,940,74
+521,South America,Blues,False,2436,74
+522,Asia,Pop,False,117,74
+523,North America,Pop,False,3591,75
+524,Africa,Blues,False,51,75
+525,South America,Jazz,False,880,75
+526,South America,Jazz,False,200,75
+527,South America,Hip-hop,True,166,75
+528,Europe,Jazz,False,207,75
+529,Africa,Pop,False,1150,75
+530,Europe,Blues,False,189,75
+531,Europe,Pop,False,25,75
+532,Europe,Pop,False,87,75
+533,Asia,Alternative,False,59,75
+534,Europe,Hip-hop,False,288,75
+535,Africa,Hip-hop,False,89,75
+536,North America,Blues,False,130,75
+537,Asia,Jazz,False,1434,75
+538,North America,Electronic,False,1880,76
+539,South America,Alternative,False,215,76
+540,North America,Jazz,False,156,76
+541,Asia,Jazz,False,157,76
+542,Europe,Blues,False,171,76
+543,North America,Rock,True,115,76
+544,South America,Hip-hop,False,158,76
+545,South America,Pop,False,777,76
+546,Europe,Alternative,True,138,76
+547,Europe,Alternative,False,174,76
+548,North America,Jazz,False,184,76
+549,Africa,Rock,False,374,76
+550,North America,Alternative,False,239,76
+551,South America,Jazz,False,91,76
+552,North America,Jazz,True,1185,76
+553,North America,Jazz,False,124,77
+554,Europe,Jazz,False,36,77
+555,Europe,Blues,False,151,77
+556,North America,Jazz,False,281,77
+557,South America,Electronic,False,159,77
+558,Africa,Blues,False,305,77
+559,Europe,Blues,False,43,77
+560,Europe,Rock,False,1279,77
+561,North America,Alternative,False,942,77
+562,North America,Blues,False,90,77
+563,Asia,Blues,False,157,77
+564,Asia,Rock,False,98,77
+565,Oceana,Electronic,False,61,77
+566,South America,Blues,False,335,77
+567,Europe,Pop,False,1217,77
+568,Africa,Electronic,False,224,77
+569,Europe,Alternative,False,1530,78
+570,North America,Pop,False,1404,78
+571,North America,Classical,False,1748,78
+572,Europe,Jazz,False,103,78
+573,Asia,Blues,True,1899,78
+574,Oceana,Alternative,False,957,78
+575,Oceana,Jazz,False,464,78
+576,North America,Electronic,False,1099,78
+577,North America,Alternative,False,184,78
+578,Asia,Jazz,False,172,78
+579,North America,Pop,False,60,78
+580,North America,Blues,False,149,78
+581,Europe,Alternative,False,350,78
+582,Africa,Jazz,False,170,78
+583,North America,Electronic,False,853,78
+584,South America,Rock,False,84,78
+585,South America,Blues,False,1281,79
+586,Asia,Blues,False,150,79
+587,Europe,Alternative,False,123,79
+588,South America,Alternative,False,163,79
+589,Asia,Alternative,False,349,79
+590,Oceana,Hip-hop,False,68,79
+591,Oceana,Rock,False,147,79
+592,South America,Pop,False,40,79
+593,Europe,Electronic,False,333,79
+594,Africa,Pop,True,109,79
+595,North America,Blues,False,1284,79
+596,South America,Hip-hop,False,116,79
+597,South America,Classical,False,175,79
+598,South America,Alternative,False,119,79
+599,North America,Classical,False,153,79
+600,Europe,Hip-hop,False,116,79
+601,Oceana,Alternative,False,182,80
+602,South America,Alternative,False,1303,80
+603,Oceana,Rock,False,2576,80
+604,Asia,Electronic,False,203,80
+605,South America,Blues,False,103,80
+606,South America,Electronic,False,97,80
+607,Europe,Classical,False,5,80
+608,Europe,Pop,False,155,80
+609,South America,Blues,False,111,80
+610,Asia,Pop,False,66,80
+611,Asia,Alternative,False,174,80
+612,North America,Hip-hop,False,51,80
+613,North America,Alternative,False,2079,80
+614,Africa,Alternative,False,207,80
+615,South America,Blues,True,1052,80
+616,Asia,Jazz,False,44,80
+617,North America,Blues,False,1222,80
+618,North America,Rock,False,2052,81
+619,North America,Classical,False,48,81
+620,Africa,Blues,False,2422,81
+621,Asia,Blues,True,1401,81
+622,North America,Jazz,False,70,81
+623,South America,Blues,False,511,81
+624,Europe,Pop,False,105,81
+625,Africa,Pop,False,123,81
+626,Africa,Pop,False,42,81
+627,Europe,Rock,False,57,81
+628,Europe,Jazz,False,85,81
+629,Europe,Pop,False,1052,81
+630,Oceana,Jazz,False,37,81
+631,South America,Jazz,False,893,81
+632,Oceana,Pop,False,74,81
+633,Europe,Jazz,False,44,81
+634,Asia,Electronic,False,846,81
+635,North America,Electronic,False,97,82
+636,Europe,Classical,False,35,82
+637,North America,Hip-hop,False,26,82
+638,North America,Blues,False,30,82
+639,Europe,Alternative,False,1113,82
+640,Asia,Hip-hop,False,413,82
+641,Europe,Pop,True,48,82
+642,South America,Pop,False,106,82
+643,Africa,Jazz,False,118,82
+644,Asia,Pop,False,28,82
+645,Asia,Alternative,False,1174,82
+646,Europe,Pop,False,48,82
+647,Asia,Electronic,False,308,82
+648,Asia,Alternative,False,502,82
+649,North America,Pop,False,1270,82
+650,Europe,Alternative,False,74,82
+651,North America,Alternative,False,34,82
+652,Asia,Pop,False,1223,83
+653,Europe,Pop,False,175,83
+654,South America,Jazz,False,51,83
+655,Asia,Jazz,False,0,83
+656,North America,Rock,False,1174,83
+657,North America,Pop,False,103,83
+658,North America,Rock,False,1456,83
+659,Europe,Blues,False,502,83
+660,North America,Blues,True,79,83
+661,North America,Rock,False,6,83
+662,Europe,Jazz,False,45,83
+663,Europe,Blues,False,39,83
+664,Africa,Blues,False,444,83
+665,South America,Jazz,False,116,83
+666,South America,Alternative,False,50,83
+667,South America,Electronic,False,60,83
+668,North America,Electronic,False,548,83
+669,South America,Electronic,False,106,83
+670,North America,Alternative,False,369,84
+671,Europe,Jazz,False,57,84
+672,North America,Rock,True,26,84
+673,Africa,Jazz,False,23,84
+674,North America,Jazz,False,43,84
+675,North America,Pop,False,37,84
+676,North America,Jazz,False,94,84
+677,Asia,Jazz,False,11,84
+678,Europe,Rock,False,849,84
+679,Oceana,Pop,False,65,84
+680,Europe,Jazz,False,0,84
+681,Oceana,Classical,False,42,84
+682,Europe,Rock,False,36,84
+683,South America,Pop,False,67,84
+684,North America,Pop,False,64,84
+685,North America,Rock,True,103,84
+686,North America,Alternative,False,49,84
+687,Europe,Jazz,False,566,84
+688,North America,Electronic,True,60,85
+689,Europe,Alternative,False,14,85
+690,South America,Blues,False,716,85
+691,South America,Alternative,False,210,85
+692,Europe,Pop,False,65,85
+693,Africa,Blues,False,50,85
+694,Asia,Jazz,False,20,85
+695,Africa,Alternative,False,52,85
+696,Africa,Alternative,False,881,85
+697,Oceana,Pop,False,622,85
+698,South America,Jazz,False,441,85
+699,Asia,Jazz,False,52,85
+700,North America,Alternative,True,24,85
+701,Africa,Electronic,False,857,85
+702,Europe,Alternative,False,265,85
+703,Europe,Pop,False,87,85
+704,Africa,Alternative,False,1039,85
+705,North America,Pop,False,591,85
+706,North America,Jazz,False,177,86
+707,Africa,Pop,False,17,86
+708,South America,Blues,False,791,86
+709,North America,Blues,False,70,86
+710,South America,Electronic,False,50,86
+711,Africa,Electronic,False,48,86
+712,Africa,Classical,False,824,86
+713,North America,Jazz,False,15,86
+714,South America,Jazz,False,781,86
+715,North America,Blues,False,40,86
+716,South America,Jazz,False,699,86
+717,Asia,Blues,False,57,86
+718,Africa,Electronic,True,640,86
+719,Europe,Jazz,False,1,86
+720,North America,Rock,False,481,86
+721,Africa,Alternative,False,899,86
+722,South America,Jazz,False,65,86
+723,Europe,Jazz,False,30,86
+724,North America,Jazz,False,28,86
+725,North America,Alternative,False,88,87
+726,North America,Jazz,False,63,87
+727,Oceana,Jazz,False,91,87
+728,South America,Pop,False,89,87
+729,North America,Blues,False,578,87
+730,Europe,Jazz,False,74,87
+731,Europe,Blues,False,22,87
+732,Asia,Electronic,False,71,87
+733,Africa,Jazz,False,100,87
+734,Asia,Pop,False,0,87
+735,North America,Alternative,False,44,87
+736,Europe,Jazz,False,81,87
+737,North America,Blues,False,5,87
+738,Africa,Alternative,False,15,87
+739,South America,Alternative,False,203,87
+740,Asia,Blues,False,649,87
+741,South America,Alternative,False,581,87
+742,Europe,Jazz,False,48,87
+743,Europe,Blues,False,40,87
+744,North America,Blues,False,33,88
+745,Africa,Blues,True,32,88
+746,North America,Electronic,False,31,88
+747,Europe,Jazz,False,63,88
+748,Oceana,Alternative,False,36,88
+749,North America,Pop,False,42,88
+750,North America,Jazz,False,130,88
+751,Europe,Pop,False,826,88
+752,North America,Jazz,False,60,88
+753,Europe,Blues,False,43,88
+754,Africa,Jazz,False,343,88
+755,Africa,Jazz,False,54,88
+756,North America,Hip-hop,False,25,88
+757,Europe,Alternative,False,12,88
+758,North America,Blues,False,20,88
+759,North America,Rock,False,49,88
+760,South America,Classical,False,31,88
+761,South America,Rock,False,24,88
+762,Africa,Jazz,False,13,88
+763,Europe,Blues,False,53,89
+764,Africa,Alternative,False,32,89
+765,Europe,Jazz,False,278,89
+766,Asia,Alternative,True,606,89
+767,Oceana,Pop,False,53,89
+768,South America,Rock,True,282,89
+769,Europe,Alternative,False,32,89
+770,South America,Pop,False,10,89
+771,North America,Jazz,False,15,89
+772,Asia,Pop,False,26,89
+773,South America,Alternative,False,48,89
+774,Asia,Alternative,False,46,89
+775,North America,Blues,False,8,89
+776,Asia,Jazz,False,65,89
+777,Africa,Pop,False,41,89
+778,South America,Blues,False,471,89
+779,South America,Blues,False,4,89
+780,Europe,Alternative,False,304,89
+781,Africa,Pop,False,65,89
+782,Europe,Alternative,False,410,89
+783,North America,Rock,False,16,90
+784,Oceana,Pop,False,24,90
+785,Europe,Alternative,False,4,90
+786,South America,Rock,False,11,90
+787,South America,Jazz,False,28,90
+788,Europe,Jazz,False,61,90
+789,North America,Alternative,False,15,90
+790,Asia,Blues,False,8,90
+791,Africa,Alternative,False,32,90
+792,North America,Electronic,False,86,90
+793,South America,Jazz,False,33,90
+794,Europe,Jazz,True,465,90
+795,Africa,Electronic,False,357,90
+796,North America,Jazz,False,1,90
+797,North America,Pop,False,0,90
+798,Africa,Alternative,False,553,90
+799,South America,Alternative,False,22,90
+800,Europe,Alternative,False,18,90
+801,North America,Jazz,False,2,90
+802,Africa,Blues,False,24,90
+803,Asia,Hip-hop,False,32,91
+804,Africa,Blues,False,34,91
+805,North America,Classical,False,0,91
+806,South America,Hip-hop,False,506,91
+807,Europe,Blues,False,2,91
+808,Europe,Pop,False,11,91
+809,Europe,Alternative,False,1,91
+810,Africa,Jazz,False,1,91
+811,Asia,Classical,False,736,91
+812,Europe,Classical,False,34,91
+813,Africa,Jazz,False,23,91
+814,North America,Alternative,False,34,91
+815,Asia,Blues,False,0,91
+816,Europe,Blues,False,58,91
+817,North America,Blues,False,0,91
+818,Europe,Electronic,False,14,91
+819,South America,Rock,True,39,91
+820,South America,Blues,False,450,91
+821,North America,Jazz,False,37,91
+822,North America,Alternative,False,59,91
+823,Oceana,Blues,False,12,92
+824,Asia,Rock,False,12,92
+825,North America,Rock,False,33,92
+826,South America,Pop,True,16,92
+827,South America,Blues,False,7,92
+828,South America,Pop,False,211,92
+829,North America,Alternative,False,23,92
+830,South America,Jazz,False,525,92
+831,Asia,Alternative,False,2,92
+832,North America,Jazz,False,4,92
+833,North America,Electronic,False,28,92
+834,South America,Jazz,True,354,92
+835,Africa,Alternative,False,12,92
+836,Asia,Pop,False,0,92
+837,South America,Alternative,False,43,92
+838,Europe,Jazz,False,6,92
+839,Europe,Blues,False,336,92
+840,Europe,Alternative,True,28,92
+841,South America,Jazz,False,0,92
+842,South America,Jazz,False,187,92
+843,Africa,Electronic,False,0,92
+844,North America,Blues,False,201,93
+845,North America,Pop,False,255,93
+846,North America,Alternative,False,2,93
+847,Asia,Jazz,False,1,93
+848,North America,Blues,False,54,93
+849,North America,Rock,False,10,93
+850,Oceana,Pop,False,16,93
+851,South America,Jazz,False,0,93
+852,North America,Pop,False,5,93
+853,Europe,Jazz,False,3,93
+854,Europe,Pop,False,13,93
+855,Asia,Alternative,False,33,93
+856,Asia,Jazz,False,11,93
+857,North America,Jazz,False,21,93
+858,Africa,Blues,False,25,93
+859,Europe,Blues,False,14,93
+860,Europe,Blues,False,345,93
+861,Oceana,Rock,False,0,93
+862,North America,Blues,False,4,93
+863,North America,Jazz,False,23,93
+864,Asia,Alternative,False,9,93
+865,Europe,Rock,False,154,94
+866,North America,Blues,False,4,94
+867,Oceana,Pop,True,12,94
+868,Oceana,Jazz,False,195,94
+869,Asia,Blues,False,0,94
+870,Europe,Alternative,False,26,94
+871,North America,Alternative,False,18,94
+872,North America,Alternative,False,35,94
+873,Asia,Pop,False,17,94
+874,North America,Alternative,False,9,94
+875,North America,Jazz,False,3,94
+876,Asia,Blues,False,3,94
+877,Africa,Blues,False,63,94
+878,North America,Jazz,False,4,94
+879,South America,Blues,False,5,94
+880,Europe,Pop,False,22,94
+881,North America,Jazz,False,0,94
+882,Europe,Alternative,False,0,94
+883,Europe,Classical,False,14,94
+884,Asia,Electronic,False,1,94
+885,Europe,Jazz,False,0,94
+886,South America,Classical,False,0,95
+887,Europe,Pop,False,0,95
+888,Europe,Jazz,False,0,95
+889,Asia,Blues,False,10,95
+890,Asia,Electronic,False,3,95
+891,Asia,Jazz,False,13,95
+892,North America,Pop,False,18,95
+893,North America,Jazz,False,4,95
+894,North America,Classical,False,218,95
+895,Africa,Rock,False,8,95
+896,North America,Hip-hop,True,0,95
+897,Europe,Pop,False,7,95
+898,Asia,Blues,False,284,95
+899,Europe,Blues,False,2,95
+900,Asia,Jazz,False,0,95
+901,Asia,Rock,False,10,95
+902,Europe,Pop,True,14,95
+903,Europe,Pop,False,329,95
+904,North America,Blues,False,0,95
+905,North America,Blues,False,290,95
+906,North America,Alternative,False,0,95
+907,Europe,Alternative,True,7,95
+908,Africa,Pop,False,1,96
+909,South America,Electronic,False,6,96
+910,North America,Electronic,False,3,96
+911,Africa,Classical,False,0,96
+912,Europe,Jazz,False,5,96
+913,North America,Alternative,False,0,96
+914,South America,Blues,False,0,96
+915,Oceana,Alternative,True,0,96
+916,Africa,Electronic,False,0,96
+917,Europe,Alternative,False,0,96
+918,North America,Electronic,False,5,96
+919,South America,Blues,False,0,96
+920,Africa,Rock,False,13,96
+921,Europe,Alternative,False,14,96
+922,Africa,Jazz,False,0,96
+923,North America,Pop,False,3,96
+924,South America,Jazz,False,130,96
+925,Africa,Blues,False,0,96
+926,Europe,Jazz,False,219,96
+927,South America,Alternative,False,2,96
+928,North America,Electronic,False,0,96
+929,South America,Pop,False,15,96
+930,North America,Blues,False,5,97
+931,Europe,Jazz,False,0,97
+932,Asia,Blues,False,63,97
+933,Asia,Alternative,False,4,97
+934,North America,Pop,False,3,97
+935,South America,Alternative,False,0,97
+936,South America,Blues,False,0,97
+937,North America,Classical,False,1,97
+938,Africa,Alternative,False,0,97
+939,Africa,Blues,False,0,97
+940,North America,Alternative,False,0,97
+941,South America,Jazz,False,0,97
+942,North America,Pop,False,7,97
+943,North America,Jazz,True,1,97
+944,Europe,Electronic,False,2,97
+945,North America,Jazz,False,1,97
+946,North America,Jazz,False,0,97
+947,North America,Pop,False,5,97
+948,Asia,Hip-hop,False,0,97
+949,Asia,Pop,False,135,97
+950,Europe,Electronic,False,2,97
+951,North America,Electronic,False,0,97
+952,North America,Jazz,False,53,98
+953,Asia,Jazz,False,0,98
+954,Africa,Pop,False,0,98
+955,North America,Electronic,False,0,98
+956,South America,Jazz,False,1,98
+957,Europe,Jazz,True,4,98
+958,North America,Electronic,False,4,98
+959,South America,Classical,False,0,98
+960,Europe,Alternative,False,3,98
+961,Asia,Jazz,False,4,98
+962,Oceana,Alternative,False,5,98
+963,North America,Classical,False,1,98
+964,Europe,Electronic,False,0,98
+965,Asia,Classical,False,0,98
+966,South America,Jazz,False,8,98
+967,Europe,Rock,False,5,98
+968,North America,Jazz,False,0,98
+969,Europe,Electronic,False,0,98
+970,North America,Blues,False,0,98
+971,Asia,Hip-hop,False,0,98
+972,Asia,Jazz,False,0,98
+973,Africa,Hip-hop,False,60,98
+974,South America,Alternative,False,0,98
+975,South America,Hip-hop,False,0,99
+976,South America,Rock,False,0,99
+977,South America,Jazz,False,0,99
+978,Asia,Electronic,False,0,99
+979,North America,Alternative,False,3,99
+980,Europe,Alternative,False,0,99
+981,Africa,Rock,False,0,99
+982,Asia,Alternative,False,0,99
+983,South America,Rock,False,3,99
+984,North America,Pop,False,0,99
+985,South America,Hip-hop,False,0,99
+986,North America,Pop,True,73,99
+987,North America,Alternative,False,0,99
+988,Asia,Blues,False,0,99
+989,Africa,Alternative,True,0,99
+990,Europe,Pop,False,0,99
+991,South America,Jazz,True,2,99
+992,South America,Jazz,False,0,99
+993,Europe,Jazz,False,0,99
+994,South America,Pop,False,2,99
+995,North America,Alternative,False,0,99
+996,South America,Jazz,True,0,99
+997,Europe,Alternative,False,0,99
