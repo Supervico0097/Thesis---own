@@ -1,7 +1,7 @@
 # Here you can set different frequencies in order to generate synthetic data based on them
 # add '-' if this probability should not be considered
 
-WEEKS_NUM: 30 # instead of dates, just num of weeks
+WEEKS_NUM: 100 # instead of dates, just num of weeks
 users_number: 10000 #this will be approximate number of user by END_DATE
 artists_number: 1000
 
