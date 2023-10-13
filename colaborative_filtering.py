@@ -53,6 +53,7 @@ def recommend_songs(user, num_recommended_songs, df_copy):
         # Create a list of recommended songs with their predicted ratings
         recommendations.append(
             {
+                "rank": rank,
                 "song_id": recommended_songs[0],
                 "streams_cnt_pred": recommended_songs[1],
             }
@@ -130,6 +131,10 @@ def song_recommender(user, num_neighbors, num_recommendation, df):
 
             # Update the predicted rating for the song in the copy of the DataFrame
             df1.iloc[song_id, user_index] = predicted_r
+
+    # Generate song recommendations for the user using the updated DataFrame
+    recommendations_df = recommend_songs(user, num_recommendation, df_copy=df1)
+    return recommendations_df
 
 
 # Entry point of the program
