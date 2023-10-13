@@ -2,7 +2,7 @@
 # add '-' if this probability should not be considered
 
 WEEKS_NUM: 100 # instead of dates, just num of weeks
-users_number: 10000 #this will be approximate number of user by END_DATE
+users_number: 1000 #this will be approximate number of user by END_DATE
 artists_number: 1000
 
 frequencies_genre: {
@@ -74,8 +74,8 @@ min_streams_to_famous_artist: 20000 #minimum streams to song before becoming fam
 
 
 #Number of STREAMS
-avg_songs_unsub: 20 #average songs listened by unsubscribed users in a week
-avg_songs_sub: 50 #average songs listened by subscribed users in a week
+avg_songs_unsub: 50 #average songs listened by unsubscribed users in a week
+avg_songs_sub: 150 #average songs listened by subscribed users in a week
 
 # Probabilities
 #Random songs section
