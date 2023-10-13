@@ -1,4 +1,7 @@
 # Import necessary libraries
+# https://towardsdatascience.com/item-based-collaborative-filtering-in-python-91f747200fab
+# https://github.com/yjeong5126/movie_recommender/blob/master/item_based_collaborative_filtering/item_based_collaborative_filtering.ipynb
+
 import numpy as np
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
@@ -47,18 +50,15 @@ def recommend_songs(user, num_recommended_songs, df_copy):
     # Sort recommended songs by predicted rating in descending order
     sorted_rm = sorted(recommended_songs, key=lambda x: x[1], reverse=True)
 
-    rank = 1
     recommendations = []
     for recommended_songs in sorted_rm[:num_recommended_songs]:
         # Create a list of recommended songs with their predicted ratings
         recommendations.append(
             {
-                "rank": rank,
                 "song_id": recommended_songs[0],
-                "streams_cnt_pred": recommended_songs[1],
+                "rating": recommended_songs[1],
             }
         )
-        rank = rank + 1
     return pd.DataFrame(recommendations)
 
 
@@ -67,19 +67,16 @@ def song_recommender(user, num_neighbors, num_recommendation, df):
     # Create a copy of the original DataFrame
     df1 = df.copy()
 
-    # Number of neighbors for the Nearest Neighbors model
-    number_neighbors = num_neighbors
-
     # Create a Nearest Neighbors model with cosine similarity
     knn = NearestNeighbors(metric="cosine", algorithm="brute")
     knn.fit(df.values)
-    distances, indices = knn.kneighbors(df.values, n_neighbors=number_neighbors)
+    distances, indices = knn.kneighbors(df.values, n_neighbors=num_neighbors)
 
     # Find the index of the user in the DataFrame
     user_index = df.columns.tolist().index(user)
 
     # Loop through each song in the DataFrame
-    for song_id, t in list(enumerate(df.index)):
+    for song_id, _ in list(enumerate(df.index)):
         # Check if the user has not streamed the song (rating is 0)
         if df.iloc[song_id, user_index] == 0:
             # Get similar songs and their distances
@@ -104,7 +101,7 @@ def song_recommender(user, num_neighbors, num_recommendation, df):
             # Calculate the predicted rating for the song
             for s in range(0, len(song_similarity)):
                 if df.iloc[sim_songs[s], user_index] == 0:
-                    if len(song_similarity_copy) == (number_neighbors - 1):
+                    if len(song_similarity_copy) == (num_neighbors - 1):
                         # Remove the first element when reaching the limit
                         song_similarity_copy.pop(s)
                     else:
@@ -142,7 +139,7 @@ if __name__ == "__main__":
     # Call the song_recommender function with specific user, neighbor count, and recommendation count
     df = load_data()
     recommendations_df = song_recommender(
-        user="user_5", num_neighbors=3, num_recommendation=5, df=df
+        user="user_5", num_neighbors=3, num_recommendation=6, df=df
     )
     # Print the recommendations
     print(recommendations_df)
