@@ -80,7 +80,7 @@ class SyntheticStreamingDataGenerator:
         stream_df.to_csv(DATA_PATH / "streams.csv", index=False)
 
     def create_users(self, week_no):
-        # https://mycurvefit.com/
+
         num_users_to_add = round(
             (11.17315 + 0.3660266 * week_no + 0.009279995 * week_no**2)
             * (self.users_number / 5976.23302825)
@@ -319,7 +319,7 @@ class SyntheticStreamingDataGenerator:
                         )
                         self.user_list[user_i] = user
 
-                    # if singer is famous, song is famous, same genre
+                    # if  same genre
                     elif (
                         random_song["genre"]
                         in self.user_list[user_i]["favorite genres"]
