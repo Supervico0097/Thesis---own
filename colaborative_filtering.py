@@ -137,7 +137,7 @@ import pandas as pd
 
 
 def precision_at_n(recommended_items, relevant_items, n):
-    relevant_and_recommended = np.intersect1d(recommended_items[:n], relevant_items)
+    relevant_and_recommended = np.intersect1d(recommended_items[:n], relevant_items[:70])
     precision = len(relevant_and_recommended) / n
     return precision
 
@@ -162,33 +162,60 @@ def evaluate_recommendation(user_id, recommendations_df, n):
     songs_df = pd.read_csv("data/songs.csv")
     users_genre_df = pd.read_csv("data/users_favorite_genre.csv")
     users_artists_df = pd.read_csv("data/users_favorite_artist.csv")
-    user_favourite_genres = users_genre_df[
-        users_genre_df.user_id == user_id
-    ].genre_id.values
-    user_favourite_artist = users_artists_df[
-        users_artists_df.user_id == user_id
-    ].artist_id.values
+    artists_df = pd.read_csv("data/artists.csv")
+    users_df = pd.read_csv("data/users.csv")
 
+    user_id = user_id.replace('user_', '')
+
+    # takes the genres that are favorite for our user
+    user_favourite_genres = users_genre_df[
+        users_genre_df.user_id == int(user_id)
+        ].genre_id.values
+
+    # takes the artists that are favorite for our user
+    user_favourite_artist = users_artists_df[
+        users_artists_df.user_id == int(user_id)
+        ].artist_id.values
+
+    # adds artist country column to song_df
+    songs_df = pd.merge(songs_df, artists_df[['artist_id', 'continent']], on='artist_id', how='left')
+
+    # Adds a binary column favourite_genre to songs_df, marking 1 for songs that belong to the user's favorite genres and 0 otherwise.
     songs_df["favourite_genre"] = songs_df.genre.isin(user_favourite_genres).astype(int)
+
+    # Adds a binary column favourite_artist to songs_df, marking 1 for songs by the user's favorite artists and 0 otherwise.
     songs_df["favourite_artist"] = songs_df.artist_id.isin(
         user_favourite_artist
     ).astype(int)
+
+    # adds a binary column common_continent to songs_df, marking 1 if user and artist have same continent
+    songs_df['common_continent'] = (
+                songs_df.continent == users_df[users_df.user_id == int(user_id)]['continent'].iloc[0]).astype(int)
+
+    del songs_df['continent']
+
+    # assign a weight for each attribute
     point_columns = {
         "favourite_genre": 10,
         "favourite_artist": 8,
+        "common_continent": 7,
         "number_of_streams": 5,
         "is_famous": 4,
         "is_artist_famous": 3,
         "is_premium": 2,
         "week_released": 1,
     }
+    # calculate the points for each attribute
     for c, multiplier in point_columns.items():
         songs_df[c + "_points"] = multiplier * songs_df[c] / songs_df[c].sum()
     points_columns = [c + "_points" for c in point_columns]
+
+    # find relevance of the songs by summing all points
     relevant_items = (
         songs_df[points_columns].sum(axis=1).sort_values(ascending=False).index
     )
 
+    print(songs_df[points_columns].sum(axis=1).sort_values(ascending=False)[:30].to_string())
     recommended_items = (
         recommendations_df.song_id.str.replace("song_", "").astype(int).values
     )
@@ -201,8 +228,8 @@ def evaluate_recommendation(user_id, recommendations_df, n):
 if __name__ == "__main__":
     # Call the song_recommender function with specific user, neighbor count, and recommendation count
     df = load_data()
-    user_id = "user_5"
-    num_recommendation = 20
+    user_id = "user_23"
+    num_recommendation = 10
     num_neighbors = 3
 
     recommendations_df = song_recommender(
@@ -212,7 +239,7 @@ if __name__ == "__main__":
         df=df,
     )
     print(recommendations_df)
-    n = 2
+    n = 5
     evaluate_recommendation(
         user_id=user_id,
         recommendations_df=recommendations_df,
