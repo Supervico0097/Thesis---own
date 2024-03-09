@@ -2,13 +2,7 @@
 # https://towardsdatascience.com/item-based-collaborative-filtering-in-python-91f747200fab
 # https://github.com/yjeong5126/movie_recommender/blob/master/item_based_collaborative_filtering/item_based_collaborative_filtering.ipynb
 
-from pathlib import Path
-
-import numpy as np
-import pandas as pd
 from sklearn.neighbors import NearestNeighbors
-
-DATA_PATH = Path("data")
 
 
 def load_data():
@@ -19,12 +13,11 @@ def load_data():
     df.user_id = df.user_id.apply(lambda x: "user_" + str(x))
     df.song_id = df.song_id.apply(lambda x: "song_" + str(x))
 
-
     # Group data by song and user IDs and calculate the count of streams
     df = df.groupby(["song_id", "user_id"]).agg(stream_count=("steam_id", "count"))
 
     # Filter out rows with stream counts less than 10
-    # df = df[df.stream_count < 10]
+    df = df[df.stream_count < 10]
 
     # Create a pivot table to reshape the data for collaborative filtering and convert to unsigned integers
     df = (
@@ -34,17 +27,16 @@ def load_data():
         .fillna(0)
         .astype(np.uint8)
     )
-
     return df
 
 
 # Define a function to recommend songs for a given user
-def recommend_songs(user, num_recommended_songs, df_copy):
+def recommend_songs(user, num_recommended_songs, df_copy, df):
     # Print the list of songs the user has streamed
-    print("The list of the Songs {} Has Streamed \n".format(user))
-    for song_id in df[df[user] > 0][user].index.tolist():
-        print(song_id)
-    print("\n")
+    # print("The list of the Songs {} Has Streamed \n".format(user))
+    # for song_id in df[df[user] > 0][user].index.tolist()[:10]:
+    #     print(song_id)
+    # print("\n")
 
     recommended_songs = []
     # Find songs the user has not streamed and calculate predicted ratings
@@ -88,6 +80,7 @@ def song_recommender(user, num_neighbors, num_recommendation, df):
             # Get similar songs and their distances
             sim_songs = indices[song_id].tolist()
             songs_distances = distances[song_id].tolist()
+
             # Remove the current song from the list if it's present
             if song_id in sim_songs:
                 indices_song_id = sim_songs.index(song_id)
@@ -98,7 +91,6 @@ def song_recommender(user, num_neighbors, num_recommendation, df):
                 sim_songs = sim_songs[: num_neighbors - 1]
                 songs_distances = songs_distances[: num_neighbors - 1]
 
-
             # Calculate song similarities based on distances
             song_similarity = [1 - x for x in songs_distances]
             song_similarity_copy = song_similarity.copy()
@@ -106,13 +98,12 @@ def song_recommender(user, num_neighbors, num_recommendation, df):
 
             # Calculate the predicted rating for the song
             for s in range(0, len(song_similarity)):
-
                 if df.iloc[sim_songs[s], user_index] == 0:
                     if len(song_similarity_copy) == (num_neighbors - 1):
-                        #if the rating is zero, ignore the rating and the similarity in calculating the predicted rating
+                        # Remove the first element when reaching the limit
                         song_similarity_copy.pop(s)
                     else:
-
+                        # Remove the first element when the list isn't at its limit
                         song_similarity_copy.pop(
                             s - (len(song_similarity) - len(song_similarity_copy))
                         )
@@ -137,16 +128,93 @@ def song_recommender(user, num_neighbors, num_recommendation, df):
             df1.iloc[song_id, user_index] = predicted_r
 
     # Generate song recommendations for the user using the updated DataFrame
-    recommendations_df = recommend_songs(user, num_recommendation, df_copy=df1)
+    recommendations_df = recommend_songs(user, num_recommendation, df_copy=df1, df=df)
     return recommendations_df
+
+
+import numpy as np
+import pandas as pd
+
+
+def precision_at_n(recommended_items, relevant_items, n):
+    relevant_and_recommended = np.intersect1d(recommended_items[:n], relevant_items)
+    precision = len(relevant_and_recommended) / n
+    return precision
+
+
+def dcg_at_n(recommended_items, relevant_items, n):
+    relevances = np.isin(recommended_items[:n], relevant_items).astype(int)
+    discounts = np.log2(
+        np.arange(len(relevances)) + 2
+    )  # +2 because the index starts at 1
+    dcg = np.sum(relevances / discounts)
+    return dcg
+
+
+def ndcg_at_n(recommended_items, relevant_items, n):
+    actual_dcg = dcg_at_n(recommended_items, relevant_items, n)
+    ideal_dcg = dcg_at_n(sorted(relevant_items, reverse=True), relevant_items, n)
+    ndcg = actual_dcg / ideal_dcg if ideal_dcg > 0 else 0
+    return ndcg
+
+
+def evaluate_recommendation(user_id, recommendations_df, n):
+    songs_df = pd.read_csv("data/songs.csv")
+    users_genre_df = pd.read_csv("data/users_favorite_genre.csv")
+    users_artists_df = pd.read_csv("data/users_favorite_artist.csv")
+    user_favourite_genres = users_genre_df[
+        users_genre_df.user_id == user_id
+    ].genre_id.values
+    user_favourite_artist = users_artists_df[
+        users_artists_df.user_id == user_id
+    ].artist_id.values
+
+    songs_df["favourite_genre"] = songs_df.genre.isin(user_favourite_genres).astype(int)
+    songs_df["favourite_artist"] = songs_df.artist_id.isin(
+        user_favourite_artist
+    ).astype(int)
+    point_columns = {
+        "favourite_genre": 10,
+        "favourite_artist": 8,
+        "number_of_streams": 5,
+        "is_famous": 4,
+        "is_artist_famous": 3,
+        "is_premium": 2,
+        "week_released": 1,
+    }
+    for c, multiplier in point_columns.items():
+        songs_df[c + "_points"] = multiplier * songs_df[c] / songs_df[c].sum()
+    points_columns = [c + "_points" for c in point_columns]
+    relevant_items = (
+        songs_df[points_columns].sum(axis=1).sort_values(ascending=False).index
+    )
+
+    recommended_items = (
+        recommendations_df.song_id.str.replace("song_", "").astype(int).values
+    )
+
+    print("Precision@N:", precision_at_n(recommended_items, relevant_items, n))
+    print("NDCG:", ndcg_at_n(recommended_items, relevant_items, n))
 
 
 # Entry point of the program
 if __name__ == "__main__":
     # Call the song_recommender function with specific user, neighbor count, and recommendation count
     df = load_data()
+    user_id = "user_5"
+    num_recommendation = 20
+    num_neighbors = 3
+
     recommendations_df = song_recommender(
-        user="user_36", num_neighbors=3, num_recommendation=6, df=df
+        user=user_id,
+        num_neighbors=num_neighbors,
+        num_recommendation=num_recommendation,
+        df=df,
     )
-    # Print the recommendations
     print(recommendations_df)
+    n = 2
+    evaluate_recommendation(
+        user_id=user_id,
+        recommendations_df=recommendations_df,
+        n=n,
+    )
