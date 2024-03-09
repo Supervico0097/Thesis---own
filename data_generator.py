@@ -357,7 +357,7 @@ class SyntheticStreamingDataGenerator:
 
     def add_stream(self, user, i, week_no):
         stream = {
-            "steam_id": len(self.stream_list),
+            "stream_id": len(self.stream_list),
             "user_id": user["user_id"],
             "song_id": i,
             "week_no": week_no,

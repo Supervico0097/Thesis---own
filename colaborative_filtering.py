@@ -14,7 +14,7 @@ def load_data():
     df.song_id = df.song_id.apply(lambda x: "song_" + str(x))
 
     # Group data by song and user IDs and calculate the count of streams
-    df = df.groupby(["song_id", "user_id"]).agg(stream_count=("steam_id", "count"))
+    df = df.groupby(["song_id", "user_id"]).agg(stream_count=("stream_id", "count"))
 
     # Filter out rows with stream counts less than 10
     df = df[df.stream_count < 10]
