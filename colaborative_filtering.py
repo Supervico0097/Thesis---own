@@ -215,7 +215,6 @@ def evaluate_recommendation(user_id, recommendations_df, n):
         songs_df[points_columns].sum(axis=1).sort_values(ascending=False).index
     )
 
-    print(songs_df[points_columns].sum(axis=1).sort_values(ascending=False)[:30].to_string())
     recommended_items = (
         recommendations_df.song_id.str.replace("song_", "").astype(int).values
     )
