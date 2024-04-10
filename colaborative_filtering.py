@@ -137,12 +137,14 @@ import pandas as pd
 
 
 def precision_at_n(recommended_items, relevant_items, n):
-    relevant_and_recommended = np.intersect1d(recommended_items[:n], relevant_items[:70])
+    # added size - IMPORTANT!!!!!
+    relevant_and_recommended = np.intersect1d(recommended_items[:n], relevant_items[:95])
     precision = len(relevant_and_recommended) / n
     return precision
 
 
 def dcg_at_n(recommended_items, relevant_items, n):
+
     relevances = np.isin(recommended_items[:n], relevant_items).astype(int)
     discounts = np.log2(
         np.arange(len(relevances)) + 2
@@ -152,6 +154,8 @@ def dcg_at_n(recommended_items, relevant_items, n):
 
 
 def ndcg_at_n(recommended_items, relevant_items, n):
+    # added size - IMPORTANT!!!!!
+    relevant_items = relevant_items[:95]
     actual_dcg = dcg_at_n(recommended_items, relevant_items, n)
     ideal_dcg = dcg_at_n(sorted(relevant_items, reverse=True), relevant_items, n)
     ndcg = actual_dcg / ideal_dcg if ideal_dcg > 0 else 0
@@ -210,6 +214,8 @@ def evaluate_recommendation(user_id, recommendations_df, n):
         songs_df[c + "_points"] = multiplier * songs_df[c] / songs_df[c].sum()
     points_columns = [c + "_points" for c in point_columns]
 
+    print(songs_df.to_string())
+
     # find relevance of the songs by summing all points
     relevant_items = (
         songs_df[points_columns].sum(axis=1).sort_values(ascending=False).index
@@ -227,7 +233,7 @@ def evaluate_recommendation(user_id, recommendations_df, n):
 if __name__ == "__main__":
     # Call the song_recommender function with specific user, neighbor count, and recommendation count
     df = load_data()
-    user_id = "user_23"
+    user_id = "user_110"
     num_recommendation = 10
     num_neighbors = 3
 
@@ -237,7 +243,6 @@ if __name__ == "__main__":
         num_recommendation=num_recommendation,
         df=df,
     )
-    print(recommendations_df)
     n = 5
     evaluate_recommendation(
         user_id=user_id,
