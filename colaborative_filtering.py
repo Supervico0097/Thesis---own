@@ -137,14 +137,14 @@ import pandas as pd
 
 
 def precision_at_n(recommended_items, relevant_items, n):
-    # added size - IMPORTANT!!!!!
-    relevant_and_recommended = np.intersect1d(recommended_items[:n], relevant_items[:95])
+    relevant_and_recommended = np.intersect1d(
+        recommended_items[:n], relevant_items[:95]
+    )
     precision = len(relevant_and_recommended) / n
     return precision
 
 
 def dcg_at_n(recommended_items, relevant_items, n):
-
     relevances = np.isin(recommended_items[:n], relevant_items).astype(int)
     discounts = np.log2(
         np.arange(len(relevances)) + 2
@@ -169,34 +169,38 @@ def evaluate_recommendation(user_id, recommendations_df, n):
     artists_df = pd.read_csv("data/artists.csv")
     users_df = pd.read_csv("data/users.csv")
 
-    user_id = user_id.replace('user_', '')
+    user_id = user_id.replace("user_", "")
 
     # takes the genres that are favorite for our user
     user_favourite_genres = users_genre_df[
         users_genre_df.user_id == int(user_id)
-        ].genre_id.values
+    ].genre_id.values
 
     # takes the artists that are favorite for our user
     user_favourite_artist = users_artists_df[
         users_artists_df.user_id == int(user_id)
-        ].artist_id.values
+    ].artist_id.values
 
     # adds artist country column to song_df
-    songs_df = pd.merge(songs_df, artists_df[['artist_id', 'continent']], on='artist_id', how='left')
+    songs_df = pd.merge(
+        songs_df, artists_df[["artist_id", "continent"]], on="artist_id", how="left"
+    )
 
-    # Adds a binary column favourite_genre to songs_df, marking 1 for songs that belong to the user's favorite genres and 0 otherwise.
+    # Adds a binary column favourite_genre to songs_df, marking 1 for songs that belong to the user's favorite_genres and 0 otherwise.
     songs_df["favourite_genre"] = songs_df.genre.isin(user_favourite_genres).astype(int)
 
-    # Adds a binary column favourite_artist to songs_df, marking 1 for songs by the user's favorite artists and 0 otherwise.
+    # Adds a binary column favourite_artist to songs_df, marking 1 for songs by the user's favorite_artists and 0 otherwise.
     songs_df["favourite_artist"] = songs_df.artist_id.isin(
         user_favourite_artist
     ).astype(int)
 
     # adds a binary column common_continent to songs_df, marking 1 if user and artist have same continent
-    songs_df['common_continent'] = (
-                songs_df.continent == users_df[users_df.user_id == int(user_id)]['continent'].iloc[0]).astype(int)
+    songs_df["common_continent"] = (
+        songs_df.continent
+        == users_df[users_df.user_id == int(user_id)]["continent"].iloc[0]
+    ).astype(int)
 
-    del songs_df['continent']
+    del songs_df["continent"]
 
     # assign a weight for each attribute
     point_columns = {
