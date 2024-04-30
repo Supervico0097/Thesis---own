@@ -138,7 +138,7 @@ import pandas as pd
 
 def precision_at_n(recommended_items, relevant_items, n):
     relevant_and_recommended = np.intersect1d(
-        recommended_items[:n], relevant_items[:95]
+        recommended_items[:n], relevant_items
     )
     precision = len(relevant_and_recommended) / n
     return precision
@@ -155,7 +155,7 @@ def dcg_at_n(recommended_items, relevant_items, n):
 
 def ndcg_at_n(recommended_items, relevant_items, n):
     # added size - IMPORTANT!!!!!
-    relevant_items = relevant_items[:95]
+    relevant_items = relevant_items
     actual_dcg = dcg_at_n(recommended_items, relevant_items, n)
     ideal_dcg = dcg_at_n(sorted(relevant_items, reverse=True), relevant_items, n)
     ndcg = actual_dcg / ideal_dcg if ideal_dcg > 0 else 0
@@ -205,11 +205,11 @@ def evaluate_recommendation(user_id, recommendations_df, n):
     # assign a weight for each attribute
     point_columns = {
         "favourite_genre": 10,
-        "favourite_artist": 8,
         "common_continent": 7,
         "number_of_streams": 5,
         "is_famous": 4,
         "is_artist_famous": 3,
+        "favourite_artist": 2,
         "is_premium": 2,
         "week_released": 1,
     }
@@ -218,11 +218,12 @@ def evaluate_recommendation(user_id, recommendations_df, n):
         songs_df[c + "_points"] = multiplier * songs_df[c] / songs_df[c].sum()
     points_columns = [c + "_points" for c in point_columns]
 
-    print(songs_df.to_string())
-
+    average = songs_df[points_columns].sum(axis=1).sort_values(ascending=False).mean()
+    benchmark = average + 0 * average
+    temp = songs_df[points_columns].sum(axis=1).sort_values(ascending=False)
     # find relevance of the songs by summing all points
     relevant_items = (
-        songs_df[points_columns].sum(axis=1).sort_values(ascending=False).index
+        temp[temp > benchmark].index
     )
 
     recommended_items = (
@@ -237,9 +238,10 @@ def evaluate_recommendation(user_id, recommendations_df, n):
 if __name__ == "__main__":
     # Call the song_recommender function with specific user, neighbor count, and recommendation count
     df = load_data()
-    user_id = "user_110"
-    num_recommendation = 10
+    user_id = "user_145"
+    num_recommendation = 30
     num_neighbors = 3
+    benchmark = 0.2  # equal to average score + bechmark*average
 
     recommendations_df = song_recommender(
         user=user_id,
