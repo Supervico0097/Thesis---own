@@ -17,7 +17,7 @@ def load_data():
     df = df.groupby(["song_id", "user_id"]).agg(stream_count=("stream_id", "count"))
 
     # Filter out rows with stream counts less than 10
-    df = df[df.stream_count < 10]
+    # df = df[df.stream_count < 300]
 
     # Create a pivot table to reshape the data for collaborative filtering and convert to unsigned integers
     df = (
@@ -203,55 +203,67 @@ def evaluate_recommendation(user_id, recommendations_df, n):
     del songs_df["continent"]
 
     # assign a weight for each attribute
+
     point_columns = {
-        "favourite_genre": 10,
-        "common_continent": 7,
-        "number_of_streams": 5,
-        "is_famous": 4,
-        "is_artist_famous": 3,
+        "favourite_genre": 1,
+        "is_premium": 80,
+        "number_of_streams": 1,
+        "common_continent": 1,
+        "is_famous": 1,
+        "is_artist_famous": 1,
         "favourite_artist": 2,
-        "is_premium": 2,
-        "week_released": 1,
+        "week_released": 2,
     }
     # calculate the points for each attribute
     for c, multiplier in point_columns.items():
         songs_df[c + "_points"] = multiplier * songs_df[c] / songs_df[c].sum()
     points_columns = [c + "_points" for c in point_columns]
 
+    # print(songs_df[points_columns].sum(axis=1).sort_values(ascending=False).mean())
+    # print(songs_df[points_columns].sum(axis=1).sort_values(ascending=False).max())
+
     average = songs_df[points_columns].sum(axis=1).sort_values(ascending=False).mean()
-    benchmark = average + 0 * average
+    benchmark = average - 0 * average
     temp = songs_df[points_columns].sum(axis=1).sort_values(ascending=False)
     # find relevance of the songs by summing all points
     relevant_items = (
         temp[temp > benchmark].index
     )
+    # print(len(relevant_items))
 
     recommended_items = (
         recommendations_df.song_id.str.replace("song_", "").astype(int).values
     )
 
-    print("Precision@N:", precision_at_n(recommended_items, relevant_items, n))
-    print("NDCG:", ndcg_at_n(recommended_items, relevant_items, n))
+    return ndcg_at_n(recommended_items, relevant_items, n), precision_at_n(recommended_items, relevant_items, n)
+    # print("Precision@N:", precision_at_n(recommended_items, relevant_items, n))
+    #print("NDCG:", ndcg_at_n(recommended_items, relevant_items, n))
 
 
 # Entry point of the program
 if __name__ == "__main__":
     # Call the song_recommender function with specific user, neighbor count, and recommendation count
     df = load_data()
-    user_id = "user_145"
-    num_recommendation = 30
+    num_recommendation = 50
     num_neighbors = 3
-    benchmark = 0.2  # equal to average score + bechmark*average
 
-    recommendations_df = song_recommender(
-        user=user_id,
-        num_neighbors=num_neighbors,
-        num_recommendation=num_recommendation,
-        df=df,
-    )
-    n = 5
-    evaluate_recommendation(
-        user_id=user_id,
-        recommendations_df=recommendations_df,
-        n=n,
-    )
+    NDCG_array = []
+    PrecisionAtN_array = []
+    for user_id in df.columns.tolist()[:15]:
+        recommendations_df = song_recommender(
+            user=user_id,
+            num_neighbors=num_neighbors,
+            num_recommendation=num_recommendation,
+            df=df,
+        )
+        n = 5
+        NDCG_value, PrecisionAtN_value = evaluate_recommendation(
+            user_id=user_id,
+            recommendations_df=recommendations_df,
+            n=n,
+        )
+        NDCG_array.append(NDCG_value)
+        PrecisionAtN_array.append(PrecisionAtN_value)
+
+    print("NDCG: ", sum(NDCG_array) / len(NDCG_array))
+    print("Precision@N: ", sum(PrecisionAtN_array) / len(PrecisionAtN_array))

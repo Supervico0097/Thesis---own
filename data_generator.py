@@ -1,3 +1,4 @@
+
 import random
 from pathlib import Path
 
@@ -29,15 +30,15 @@ class SyntheticStreamingDataGenerator:
         self.user_fav_artist = []
         self.user_fav_song = []
 
-        self.config.users_number = self.config.users_number
-        self.config.artists_number = self.config.artists_number
+        self.config.users_number = self.config.users_rate
+        self.config.artists_number = self.config.artists_rate
         self.config.WEEKS_NUM = self.config.WEEKS_NUM
 
         frequencies_genre_df = pd.DataFrame(self.config.frequencies_genre).T
         self.probabilities_genre_df = frequencies_genre_df / frequencies_genre_df.sum()
         frequencies_continent_df = pd.DataFrame(self.config.frequencies_continent).T
         self.probabilities_continent_df = (
-            frequencies_continent_df / frequencies_continent_df.sum()
+                frequencies_continent_df / frequencies_continent_df.sum()
         )
 
     def run(self):
@@ -118,8 +119,8 @@ class SyntheticStreamingDataGenerator:
                     artist_id=artist.artist_id,
                     genre=artist.genre,
                     is_artist_famous=artist.is_famous,
-                    is_premium=_rand_bool(0.1),
-                    is_famous=_rand_bool(0.7) if artist.is_famous else _rand_bool(0.1),
+                    is_premium=_rand_bool(1),  # -->0.9 for #1 and #2. -->1 for #3
+                    is_famous=_rand_bool(0.1) if artist.is_famous else _rand_bool(0.1),  # 0.1--> for test1 and test2
                     week_released=week_no,
                     number_of_streams=0,
                 )
@@ -142,8 +143,8 @@ class SyntheticStreamingDataGenerator:
             n_songs = len(self.song_list)
 
             if (
-                self.user_list[user_i].is_subscribed
-                and len(self.song_list) > self.config.avg_songs_sub
+                    self.user_list[user_i].is_subscribed
+                    and len(self.song_list) > self.config.avg_songs_sub
             ):
                 n_songs = random.randrange(
                     self.config.avg_songs_sub - int(0.5 * self.config.avg_songs_sub),
@@ -151,15 +152,15 @@ class SyntheticStreamingDataGenerator:
                 )
 
             elif (
-                not self.user_list[user_i].is_subscribed
-                and len(premium_songs) < self.config.avg_songs_unsub
+                    not self.user_list[user_i].is_subscribed
+                    and len(premium_songs) < self.config.avg_songs_unsub
             ):
                 list_songs = premium_songs
                 n_songs = len(premium_songs)
 
             elif (
-                not self.user_list[user_i].is_subscribed
-                and len(premium_songs) > self.config.avg_songs_unsub
+                    not self.user_list[user_i].is_subscribed
+                    and len(premium_songs) > self.config.avg_songs_unsub
             ):
                 list_songs = premium_songs
                 n_songs = random.randrange(
@@ -171,23 +172,23 @@ class SyntheticStreamingDataGenerator:
 
             # Random songs outside user's favorites
             if (
-                random.uniform(0, 1) < self.config.p_random_songs_stream and list_songs
+                    random.uniform(0, 1) < self.config.p_random_songs_stream and list_songs
             ):  # check if user will access the random songs
                 for _ in range(int(n_songs)):  # go through songs
                     random_song = random.choice(list_songs)  # choose random song
 
                     # if singer is famous, song is famous, same genre, same continent
                     if (
-                        (self.artist_list[random_song.artist_id].is_famous)
-                        and (random_song.is_famous)
-                        and (
+                            (self.artist_list[random_song.artist_id].is_famous)
+                            and (random_song.is_famous)
+                            and (
                             random_song.genre in self.user_list[user_i].favorite_genres
-                        )
-                        and (
+                    )
+                            and (
                             self.artist_list[random_song.artist_id].continent
                             == self.user_list[user_i].continent
-                        )
-                        and random.uniform(0, 1) < self.config.p_fav_art_sng_gnr_cnt
+                    )
+                            and random.uniform(0, 1) < self.config.p_fav_art_sng_gnr_cnt
                     ):
                         user = self.add_stream(
                             self.user_list[user_i], random_song.song_id, week_no
@@ -196,12 +197,12 @@ class SyntheticStreamingDataGenerator:
 
                     # if singer is famous, song is famous, same genre
                     elif (
-                        self.artist_list[random_song.artist_id].is_famous
-                        and random_song.is_famous
-                        and (
-                            random_song.genre in self.user_list[user_i].favorite_genres
-                        )
-                        and random.uniform(0, 1) < self.config.p_fav_art_sng_gnr
+                            self.artist_list[random_song.artist_id].is_famous
+                            and random_song.is_famous
+                            and (
+                                    random_song.genre in self.user_list[user_i].favorite_genres
+                            )
+                            and random.uniform(0, 1) < self.config.p_fav_art_sng_gnr
                     ):
                         user = self.add_stream(
                             self.user_list[user_i], random_song.song_id, week_no
@@ -210,7 +211,7 @@ class SyntheticStreamingDataGenerator:
 
                     # if  same genre
                     elif (
-                        random_song.genre in self.user_list[user_i].favorite_genres
+                            random_song.genre in self.user_list[user_i].favorite_genres
                     ) and random.uniform(0, 1) < self.config.p_fav_gnr:
                         user = self.add_stream(
                             self.user_list[user_i], random_song.song_id, week_no
@@ -224,8 +225,8 @@ class SyntheticStreamingDataGenerator:
                         self.user_list[user_i] = user
 
             if (
-                random.uniform(0, 1) < self.config.p_favorite_playlist
-                and self.user_list[user_i].favorite_songs
+                    random.uniform(0, 1) < self.config.p_favorite_playlist
+                    and self.user_list[user_i].favorite_songs
             ):  # check if user will access favorite_songs
                 list_songs = self.user_list[user_i].favorite_songs
                 if len(list_songs) > 1:
@@ -272,8 +273,8 @@ class SyntheticStreamingDataGenerator:
         self.artist_list[self.song_list[i].artist_id].number_of_streams += 1
 
         if (
-            self.artist_list[self.song_list[i].artist_id].number_of_streams
-            > self.config.min_streams_to_famous_artist
+                self.artist_list[self.song_list[i].artist_id].number_of_streams
+                > self.config.min_streams_to_famous_artist
         ):
             self.artist_list[self.song_list[i].artist_id].is_famous = True
 

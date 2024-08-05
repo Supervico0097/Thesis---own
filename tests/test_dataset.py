@@ -4,7 +4,7 @@ import pandas as pd
 import pytest
 
 # Directory where the data files are located
-DATA_DIR = Path("data")
+DATA_DIR = Path("../data")
 
 # Expected checks for each file
 check_dict = {

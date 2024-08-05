@@ -5,8 +5,8 @@ class Config:
     def __init__(self, config_file_path):
         self.config = self.load_config(config_file_path)
 
-        self.users_number = self.config["users_number"]
-        self.artists_number = self.config["artists_number"]
+        self.users_rate = self.config["users_rate"]
+        self.artists_rate = self.config["artists_rate"]
         self.WEEKS_NUM = self.config["WEEKS_NUM"]
         self.frequencies_genre = self.config["frequencies_genre"]
         self.frequencies_continent = self.config["frequencies_continent"]
