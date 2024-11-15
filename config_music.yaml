@@ -62,7 +62,7 @@ frequencies_genre: {
   },
   'Oceana': {
     "user": 300,
-    "artist": 700,
+    "artist": 300,
   },
 }
 
@@ -73,20 +73,20 @@ min_streams_to_famous_artist: 40 #minimum streams to song before becoming famous
 
 
 #Number of STREAMS
-avg_songs_unsub: 10 #average songs listened by unsubscribed users in a week
-avg_songs_sub: 15 #average songs listened by subscribed users in a week
+avg_songs_unsub: 5 #average songs listened by unsubscribed users in a week
+avg_songs_sub: 10 #average songs listened by subscribed users in a week
 
 # Probabilities
 #Random songs section
-p_random_songs_stream: 0.8 #probability that user will access random songs section
-p_favorite_playlist: 0.3 #probability that user will access favorite songs section
+p_random_songs_stream: 0.5 #probability that user will access random songs section
+p_favorite_playlist: 0.6 #probability that user will access favorite songs section
 
 
-p_fav_art_sng_gnr_cnt: 0.4 #Probability of listening to song with famous artist, famous song, favorite genre, same continent
+p_fav_art_sng_gnr_cnt: 0.6 #Probability of listening to song with famous artist, famous song, favorite genre, same continent
 p_fav_art_sng_gnr: 0.5 #Probability of listening to song with famous artist, famous song, favorite genre
 p_fav_gnr: 0.4 #Probability of listening to favorite genre
-p_other: 0.8 #other
+p_other: 0.6 #other
 
 
 
-p_favorite: 0.3 # probability that user will listen to song that is a favorite
+p_favorite: 0.5 # probability that user will listen to song that is a favorite

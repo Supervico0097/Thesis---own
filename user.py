@@ -29,7 +29,7 @@ class User:
         self.favorite_artists = []
         self.favorite_songs = []
         self.streams = {}
-        self.is_subscribed = _rand_bool(0.1)
+        self.is_subscribed = _rand_bool(0.1)  # 0.1 -> first and second test, 0 -> third test
         self.week = week_no
 
         self._add_favorite_genres(probabilities_genre_df)

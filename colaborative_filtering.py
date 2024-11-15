@@ -244,12 +244,12 @@ def evaluate_recommendation(user_id, recommendations_df, n):
 if __name__ == "__main__":
     # Call the song_recommender function with specific user, neighbor count, and recommendation count
     df = load_data()
-    num_recommendation = 50
-    num_neighbors = 3
+    num_recommendation = 40
+    num_neighbors = 8
 
     NDCG_array = []
     PrecisionAtN_array = []
-    for user_id in df.columns.tolist()[:15]:
+    for user_id in df.columns.tolist()[:50]:
         recommendations_df = song_recommender(
             user=user_id,
             num_neighbors=num_neighbors,

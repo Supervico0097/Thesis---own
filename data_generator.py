@@ -119,8 +119,9 @@ class SyntheticStreamingDataGenerator:
                     artist_id=artist.artist_id,
                     genre=artist.genre,
                     is_artist_famous=artist.is_famous,
-                    is_premium=_rand_bool(1),  # -->0.9 for #1 and #2. -->1 for #3
-                    is_famous=_rand_bool(0.1) if artist.is_famous else _rand_bool(0.1),  # 0.1--> for test1 and test2
+                    is_premium=_rand_bool(0.9),  # -->0.9 for #1 and #2. -->1 for #3
+                    is_famous=_rand_bool(0.1) if artist.is_famous else _rand_bool(0.1),
+                    # 0.1--> for test1 and test2, 1--> test 3
                     week_released=week_no,
                     number_of_streams=0,
                 )
