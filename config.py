@@ -23,6 +23,9 @@ class Config:
         self.min_streams_to_favorites = self.config["min_streams_to_favorites"]
         self.min_streams_to_famous_song = self.config["min_streams_to_famous_song"]
         self.min_streams_to_famous_artist = self.config["min_streams_to_famous_artist"]
+        self.p_is_song_premium = self.config["p_is_song_premium"]
+        self.P_is_artist_famous = self.config["P_is_artist_famous"]
+        self.p_is_user_subscribed = self.config["p_is_user_subscribed"]
 
     def load_config(self, config_file_path):
         with open(config_file_path, "r") as fh:
