@@ -83,7 +83,7 @@ p_favorite_playlist: 0.6 #probability that user will access favorite songs secti
 
 p_is_song_premium: 0.9
 P_is_artist_famous: 0.1
-p_is_user_subscribed: 0.1
+p_is_user_subscribed: 0
 
 p_fav_art_sng_gnr_cnt: 0.6 #Probability of listening to song with famous artist, famous song, favorite genre, same continent
 p_fav_art_sng_gnr: 0.5 #Probability of listening to song with famous artist, famous song, favorite genre

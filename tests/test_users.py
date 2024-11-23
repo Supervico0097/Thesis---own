@@ -67,6 +67,7 @@ def sample_user():
         probabilities_genre_df=probabilities_genre_df,
         artist_list=artist_list,
         song_list=song_list,
+        p_is_user_subscribed=0.1
     )
 
 
