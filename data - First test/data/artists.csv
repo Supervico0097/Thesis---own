@@ -1,0 +1,31 @@
+artist_id,continent,genre,is_famous,number_of_streams,week_no_created
+0,Europe,Blues,True,5068,0
+1,Europe,Classical,True,3771,1
+2,Europe,Hip-hop,True,5952,2
+3,North America,Jazz,True,1663,3
+4,Europe,Alternative,True,3918,4
+5,Europe,Jazz,True,6248,5
+6,Europe,Classical,True,3524,6
+7,Europe,Blues,True,3419,7
+8,North America,Hip-hop,True,1198,8
+9,North America,Jazz,True,3561,9
+10,North America,Jazz,True,1018,10
+11,Europe,Classical,True,657,11
+12,Europe,Alternative,True,628,12
+13,Europe,Classical,True,2310,13
+14,Africa,Jazz,True,480,14
+15,Asia,Pop,True,549,15
+16,Europe,Jazz,True,354,16
+17,Europe,Jazz,True,53,17
+18,Europe,Classical,True,105,18
+19,Europe,Jazz,True,224,19
+20,Oceana,Blues,True,60,20
+21,Europe,Classical,True,203,21
+22,Europe,Alternative,True,310,22
+23,Africa,Classical,False,39,23
+24,North America,Jazz,False,3,24
+25,Europe,Jazz,False,3,25
+26,Europe,Jazz,False,14,26
+27,Europe,Jazz,False,0,27
+28,Europe,Blues,False,5,28
+29,Europe,Classical,False,0,29
